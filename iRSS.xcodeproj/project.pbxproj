@@ -69,6 +69,7 @@
 		5878BB56184C623500E3613C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5878BB55184C623500E3613C /* MobileCoreServices.framework */; };
 		5878BB59184C647500E3613C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5878BB58184C647500E3613C /* Security.framework */; };
 		5878BB61184C656200E3613C /* NSFileManager+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5878BB60184C656200E3613C /* NSFileManager+Extend.m */; };
+		5891A4C6184CABB2009B707F /* RSSListDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 5891A4C5184CABB2009B707F /* RSSListDao.m */; };
 		58B801F8184C217100A30235 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801F7184C217100A30235 /* UIKit.framework */; };
 		58B801FA184C217100A30235 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801F9184C217100A30235 /* Foundation.framework */; };
 		58B801FC184C217100A30235 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801FB184C217100A30235 /* CoreGraphics.framework */; };
@@ -211,6 +212,8 @@
 		5878BB58184C647500E3613C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		5878BB5F184C656200E3613C /* NSFileManager+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Extend.h"; sourceTree = "<group>"; };
 		5878BB60184C656200E3613C /* NSFileManager+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Extend.m"; sourceTree = "<group>"; };
+		5891A4C4184CABB2009B707F /* RSSListDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSListDao.h; sourceTree = "<group>"; };
+		5891A4C5184CABB2009B707F /* RSSListDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSListDao.m; sourceTree = "<group>"; };
 		58B801F4184C217100A30235 /* iRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B801F7184C217100A30235 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		58B801F9184C217100A30235 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -745,6 +748,8 @@
 		5878BB30184C35A700E3613C /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				5891A4C4184CABB2009B707F /* RSSListDao.h */,
+				5891A4C5184CABB2009B707F /* RSSListDao.m */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -1042,6 +1047,7 @@
 				5878BB3F184C552A00E3613C /* RSSListViewController.m in Sources */,
 				5878BAF9184C301D00E3613C /* BaseDao.m in Sources */,
 				5878BB48184C55BB00E3613C /* BlogReaderViewController.m in Sources */,
+				5891A4C6184CABB2009B707F /* RSSListDao.m in Sources */,
 				5878BAF8184C301D00E3613C /* BaseViewController.m in Sources */,
 				5878BB16184C301D00E3613C /* UIImageView+MKNetworkKitAdditions.m in Sources */,
 				584AE830184C6CDF0009A10E /* RSSLogoView.m in Sources */,
