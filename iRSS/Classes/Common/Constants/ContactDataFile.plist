@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>分店地址</string>
+		<key>Image</key>
+		<string>ico_contact_branch.png</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>联系电话</string>
+		<key>Image</key>
+		<string>ico_contact_tel.png</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>关注微信</string>
+		<key>Image</key>
+		<string>ico_contact_wechat.png</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>新浪微博</string>
+		<key>Image</key>
+		<string>ico_contact_weibo.png</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>官方网站</string>
+		<key>Image</key>
+		<string>ico_contact_web.png</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>在线客服</string>
+		<key>Image</key>
+		<string>ico_contact_chat.png</string>
+	</dict>
+</array>
+</plist>
