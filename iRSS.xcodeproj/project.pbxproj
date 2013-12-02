@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58B801F8184C217100A30235 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801F7184C217100A30235 /* UIKit.framework */; };
+		58B801FA184C217100A30235 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801F9184C217100A30235 /* Foundation.framework */; };
+		58B801FC184C217100A30235 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801FB184C217100A30235 /* CoreGraphics.framework */; };
+		58B80202184C217100A30235 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58B80200184C217100A30235 /* InfoPlist.strings */; };
+		58B80204184C217100A30235 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B80203184C217100A30235 /* main.m */; };
+		58B80208184C217100A30235 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B80207184C217100A30235 /* AppDelegate.m */; };
+		58B8020A184C217100A30235 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 58B80209184C217100A30235 /* Default.png */; };
+		58B8020C184C217100A30235 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58B8020B184C217100A30235 /* Default@2x.png */; };
+		58B8020E184C217100A30235 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58B8020D184C217100A30235 /* Default-568h@2x.png */; };
+		58B80211184C217100A30235 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B80210184C217100A30235 /* ViewController.m */; };
+		58B80214184C217100A30235 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58B80212184C217100A30235 /* ViewController.xib */; };
+		58B8021C184C217100A30235 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B8021B184C217100A30235 /* SenTestingKit.framework */; };
+		58B8021D184C217100A30235 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801F7184C217100A30235 /* UIKit.framework */; };
+		58B8021E184C217100A30235 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801F9184C217100A30235 /* Foundation.framework */; };
+		58B80226184C217100A30235 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58B80224184C217100A30235 /* InfoPlist.strings */; };
+		58B80229184C217100A30235 /* iRSSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B80228184C217100A30235 /* iRSSTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		58B8021F184C217100A30235 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58B801EC184C217100A30235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B801F3184C217100A30235;
+			remoteInfo = iRSS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		58B801F4184C217100A30235 /* iRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58B801F7184C217100A30235 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		58B801F9184C217100A30235 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		58B801FB184C217100A30235 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		58B801FF184C217100A30235 /* iRSS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRSS-Info.plist"; sourceTree = "<group>"; };
+		58B80201184C217100A30235 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		58B80203184C217100A30235 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58B80205184C217100A30235 /* iRSS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iRSS-Prefix.pch"; sourceTree = "<group>"; };
+		58B80206184C217100A30235 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		58B80207184C217100A30235 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		58B80209184C217100A30235 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		58B8020B184C217100A30235 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		58B8020D184C217100A30235 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		58B8020F184C217100A30235 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		58B80210184C217100A30235 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		58B80213184C217100A30235 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		58B8021A184C217100A30235 /* iRSSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRSSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58B8021B184C217100A30235 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		58B80223184C217100A30235 /* iRSSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRSSTests-Info.plist"; sourceTree = "<group>"; };
+		58B80225184C217100A30235 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		58B80227184C217100A30235 /* iRSSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRSSTests.h; sourceTree = "<group>"; };
+		58B80228184C217100A30235 /* iRSSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iRSSTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58B801F1184C217100A30235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58B801F8184C217100A30235 /* UIKit.framework in Frameworks */,
+				58B801FA184C217100A30235 /* Foundation.framework in Frameworks */,
+				58B801FC184C217100A30235 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58B80216184C217100A30235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58B8021C184C217100A30235 /* SenTestingKit.framework in Frameworks */,
+				58B8021D184C217100A30235 /* UIKit.framework in Frameworks */,
+				58B8021E184C217100A30235 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58B801EB184C217100A30235 = {
+			isa = PBXGroup;
+			children = (
+				58B801FD184C217100A30235 /* iRSS */,
+				58B80221184C217100A30235 /* iRSSTests */,
+				58B801F6184C217100A30235 /* Frameworks */,
+				58B801F5184C217100A30235 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58B801F5184C217100A30235 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58B801F4184C217100A30235 /* iRSS.app */,
+				58B8021A184C217100A30235 /* iRSSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58B801F6184C217100A30235 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58B801F7184C217100A30235 /* UIKit.framework */,
+				58B801F9184C217100A30235 /* Foundation.framework */,
+				58B801FB184C217100A30235 /* CoreGraphics.framework */,
+				58B8021B184C217100A30235 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58B801FD184C217100A30235 /* iRSS */ = {
+			isa = PBXGroup;
+			children = (
+				58B80206184C217100A30235 /* AppDelegate.h */,
+				58B80207184C217100A30235 /* AppDelegate.m */,
+				58B8020F184C217100A30235 /* ViewController.h */,
+				58B80210184C217100A30235 /* ViewController.m */,
+				58B80212184C217100A30235 /* ViewController.xib */,
+				58B801FE184C217100A30235 /* Supporting Files */,
+			);
+			path = iRSS;
+			sourceTree = "<group>";
+		};
+		58B801FE184C217100A30235 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58B801FF184C217100A30235 /* iRSS-Info.plist */,
+				58B80200184C217100A30235 /* InfoPlist.strings */,
+				58B80203184C217100A30235 /* main.m */,
+				58B80205184C217100A30235 /* iRSS-Prefix.pch */,
+				58B80209184C217100A30235 /* Default.png */,
+				58B8020B184C217100A30235 /* Default@2x.png */,
+				58B8020D184C217100A30235 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58B80221184C217100A30235 /* iRSSTests */ = {
+			isa = PBXGroup;
+			children = (
+				58B80227184C217100A30235 /* iRSSTests.h */,
+				58B80228184C217100A30235 /* iRSSTests.m */,
+				58B80222184C217100A30235 /* Supporting Files */,
+			);
+			path = iRSSTests;
+			sourceTree = "<group>";
+		};
+		58B80222184C217100A30235 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58B80223184C217100A30235 /* iRSSTests-Info.plist */,
+				58B80224184C217100A30235 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58B801F3184C217100A30235 /* iRSS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58B8022C184C217100A30235 /* Build configuration list for PBXNativeTarget "iRSS" */;
+			buildPhases = (
+				58B801F0184C217100A30235 /* Sources */,
+				58B801F1184C217100A30235 /* Frameworks */,
+				58B801F2184C217100A30235 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iRSS;
+			productName = iRSS;
+			productReference = 58B801F4184C217100A30235 /* iRSS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58B80219184C217100A30235 /* iRSSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58B8022F184C217100A30235 /* Build configuration list for PBXNativeTarget "iRSSTests" */;
+			buildPhases = (
+				58B80215184C217100A30235 /* Sources */,
+				58B80216184C217100A30235 /* Frameworks */,
+				58B80217184C217100A30235 /* Resources */,
+				58B80218184C217100A30235 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58B80220184C217100A30235 /* PBXTargetDependency */,
+			);
+			name = iRSSTests;
+			productName = iRSSTests;
+			productReference = 58B8021A184C217100A30235 /* iRSSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58B801EC184C217100A30235 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = sherwin;
+			};
+			buildConfigurationList = 58B801EF184C217100A30235 /* Build configuration list for PBXProject "iRSS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58B801EB184C217100A30235;
+			productRefGroup = 58B801F5184C217100A30235 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58B801F3184C217100A30235 /* iRSS */,
+				58B80219184C217100A30235 /* iRSSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58B801F2184C217100A30235 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58B80202184C217100A30235 /* InfoPlist.strings in Resources */,
+				58B8020A184C217100A30235 /* Default.png in Resources */,
+				58B8020C184C217100A30235 /* Default@2x.png in Resources */,
+				58B8020E184C217100A30235 /* Default-568h@2x.png in Resources */,
+				58B80214184C217100A30235 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58B80217184C217100A30235 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58B80226184C217100A30235 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58B80218184C217100A30235 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58B801F0184C217100A30235 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58B80204184C217100A30235 /* main.m in Sources */,
+				58B80208184C217100A30235 /* AppDelegate.m in Sources */,
+				58B80211184C217100A30235 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58B80215184C217100A30235 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58B80229184C217100A30235 /* iRSSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58B80220184C217100A30235 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58B801F3184C217100A30235 /* iRSS */;
+			targetProxy = 58B8021F184C217100A30235 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		58B80200184C217100A30235 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58B80201184C217100A30235 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		58B80212184C217100A30235 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58B80213184C217100A30235 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		58B80224184C217100A30235 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58B80225184C217100A30235 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		58B8022A184C217100A30235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58B8022B184C217100A30235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58B8022D184C217100A30235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRSS/iRSS-Prefix.pch";
+				INFOPLIST_FILE = "iRSS/iRSS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		58B8022E184C217100A30235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRSS/iRSS-Prefix.pch";
+				INFOPLIST_FILE = "iRSS/iRSS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		58B80230184C217100A30235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iRSS.app/iRSS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRSS/iRSS-Prefix.pch";
+				INFOPLIST_FILE = "iRSSTests/iRSSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		58B80231184C217100A30235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iRSS.app/iRSS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRSS/iRSS-Prefix.pch";
+				INFOPLIST_FILE = "iRSSTests/iRSSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58B801EF184C217100A30235 /* Build configuration list for PBXProject "iRSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B8022A184C217100A30235 /* Debug */,
+				58B8022B184C217100A30235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58B8022C184C217100A30235 /* Build configuration list for PBXNativeTarget "iRSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B8022D184C217100A30235 /* Debug */,
+				58B8022E184C217100A30235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		58B8022F184C217100A30235 /* Build configuration list for PBXNativeTarget "iRSSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B80230184C217100A30235 /* Debug */,
+				58B80231184C217100A30235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58B801EC184C217100A30235 /* Project object */;
+}
