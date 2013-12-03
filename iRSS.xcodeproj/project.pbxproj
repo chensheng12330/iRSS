@@ -42,7 +42,6 @@
 		5878BB09184C301D00E3613C /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5878BAC0184C301D00E3613C /* MMDrawerVisualState.m */; };
 		5878BB0A184C301D00E3613C /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5878BAC2184C301D00E3613C /* UIViewController+MMDrawerController.m */; };
 		5878BB0B184C301D00E3613C /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 5878BAC5184C301D00E3613C /* OpenUDID.m */; };
-		5878BB0C184C301D00E3613C /* app_data.db in Resources */ = {isa = PBXBuildFile; fileRef = 5878BAC8184C301D00E3613C /* app_data.db */; };
 		5878BB0D184C301D00E3613C /* SHDBManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5878BACA184C301D00E3613C /* SHDBManage.m */; };
 		5878BB0E184C301D00E3613C /* SHKeyedArchiverManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5878BACE184C301D00E3613C /* SHKeyedArchiverManage.m */; };
 		5878BB0F184C301D00E3613C /* SHUserSettingDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 5878BAD0184C301D00E3613C /* SHUserSettingDao.m */; };
@@ -86,6 +85,8 @@
 		58B80226184C217100A30235 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58B80224184C217100A30235 /* InfoPlist.strings */; };
 		58B80229184C217100A30235 /* iRSSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B80228184C217100A30235 /* iRSSTests.m */; };
 		58B80233184C21FF00A30235 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 58B80232184C21FF00A30235 /* Icon.png */; };
+		58CFD9CB184E14D80064454D /* irss.db in Resources */ = {isa = PBXBuildFile; fileRef = 58CFD9CA184E14D80064454D /* irss.db */; };
+		58CFD9CF184E26120064454D /* NSString+SHNSStringForDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CFD9CE184E26120064454D /* NSString+SHNSStringForDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,7 +165,6 @@
 		5878BAC2184C301D00E3613C /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		5878BAC4184C301D00E3613C /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		5878BAC5184C301D00E3613C /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
-		5878BAC8184C301D00E3613C /* app_data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = app_data.db; sourceTree = "<group>"; };
 		5878BAC9184C301D00E3613C /* SHDBManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDBManage.h; sourceTree = "<group>"; };
 		5878BACA184C301D00E3613C /* SHDBManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDBManage.m; sourceTree = "<group>"; };
 		5878BACB184C301D00E3613C /* SQLiteDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteDatabase.h; sourceTree = "<group>"; };
@@ -237,6 +237,9 @@
 		58B80227184C217100A30235 /* iRSSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRSSTests.h; sourceTree = "<group>"; };
 		58B80228184C217100A30235 /* iRSSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iRSSTests.m; sourceTree = "<group>"; };
 		58B80232184C21FF00A30235 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		58CFD9CA184E14D80064454D /* irss.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = irss.db; sourceTree = "<group>"; };
+		58CFD9CD184E26120064454D /* NSString+SHNSStringForDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHNSStringForDate.h"; sourceTree = "<group>"; };
+		58CFD9CE184E26120064454D /* NSString+SHNSStringForDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHNSStringForDate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +387,7 @@
 		5878BA9B184C301D00E3613C /* Research Dev Lib */ = {
 			isa = PBXGroup;
 			children = (
+				58CFD9CC184E26120064454D /* Categories */,
 				5878BA9C184C301D00E3613C /* SHAPPResource */,
 				5878BA9F184C301D00E3613C /* SHUserSetting */,
 				5878BAA4184C301D00E3613C /* UIDevice_Extend */,
@@ -501,7 +505,6 @@
 		5878BAC7184C301D00E3613C /* DB Service */ = {
 			isa = PBXGroup;
 			children = (
-				5878BAC8184C301D00E3613C /* app_data.db */,
 				5878BAC9184C301D00E3613C /* SHDBManage.h */,
 				5878BACA184C301D00E3613C /* SHDBManage.m */,
 				5878BACB184C301D00E3613C /* SQLiteDatabase.h */,
@@ -592,6 +595,7 @@
 		5878BAF2184C301D00E3613C /* Resource Files */ = {
 			isa = PBXGroup;
 			children = (
+				58CFD9C9184E14D80064454D /* DB Files */,
 			);
 			path = "Resource Files";
 			sourceTree = "<group>";
@@ -910,6 +914,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		58CFD9C9184E14D80064454D /* DB Files */ = {
+			isa = PBXGroup;
+			children = (
+				58CFD9CA184E14D80064454D /* irss.db */,
+			);
+			path = "DB Files";
+			sourceTree = "<group>";
+		};
+		58CFD9CC184E26120064454D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				58CFD9CD184E26120064454D /* NSString+SHNSStringForDate.h */,
+				58CFD9CE184E26120064454D /* NSString+SHNSStringForDate.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -988,7 +1009,7 @@
 				58B8020C184C217100A30235 /* Default@2x.png in Resources */,
 				58B8020E184C217100A30235 /* Default-568h@2x.png in Resources */,
 				584AE832184C703D0009A10E /* RSS.png in Resources */,
-				5878BB0C184C301D00E3613C /* app_data.db in Resources */,
+				58CFD9CB184E14D80064454D /* irss.db in Resources */,
 				5878BAF5184C301D00E3613C /* ContactDataFile.plist in Resources */,
 				5878BAF4184C301D00E3613C /* class_string.plist in Resources */,
 				58B80233184C21FF00A30235 /* Icon.png in Resources */,
@@ -1076,6 +1097,7 @@
 				5878BAFB184C301D00E3613C /* SHAPPResource.m in Sources */,
 				584AE849184C7F120009A10E /* MWFeedItem.m in Sources */,
 				5878BB19184C301D00E3613C /* Reachability.m in Sources */,
+				58CFD9CF184E26120064454D /* NSString+SHNSStringForDate.m in Sources */,
 				5878BB07184C301D00E3613C /* MMDrawerBarButtonItem.m in Sources */,
 				5878BB61184C656200E3613C /* NSFileManager+Extend.m in Sources */,
 				584AE82A184C6CA80009A10E /* MMTableViewCell.m in Sources */,

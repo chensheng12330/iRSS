@@ -49,7 +49,7 @@ static SHDBManage *_sharedDBManage = nil;
     self = [super init];
     if (self) {
         //database init
-        _db = [[FMDatabase alloc] initWithDBName:@"app_data.db"];
+        _db = [[FMDatabase alloc] initWithDBName:@"irss.db"];
         DBMQuickCheck([_db open]);
     }
     return self;

@@ -32,7 +32,13 @@
 
 - (void)dealloc
 {
-    self.strId = nil;
     [super dealloc];
+}
+
+-(NSString*) description
+{
+    NSString *superStr = [super description];
+    superStr = [superStr stringByAppendingFormat:@"id:[%d] ",_nId];
+    return superStr;
 }
 @end

@@ -102,9 +102,9 @@
 //}
 
 
-- (id)queryWithEntity:(Entity *)entity inDatabase:(SQLiteDatabase *)db { return nil; }
-- (BOOL)insertWithEntity:(Entity *)entity inDatabase:(SQLiteDatabase *)db { return NO; }
-- (BOOL)updateWithEntity:(Entity *)entity inDatabase:(SQLiteDatabase *)db { return NO; }
-- (BOOL)deleteWithEntity:(Entity *)entity inDatabase:(SQLiteDatabase *)db { return NO; }
+- (id)queryWithEntity:(Entity *)entity inDatabase:(FMDatabase *)db { return nil; }
+- (BOOL)insertWithEntity:(Entity *)entity inDatabase:(FMDatabase *)db { return NO; }
+- (BOOL)updateWithEntity:(Entity *)entity inDatabase:(FMDatabase *)db { return NO; }
+- (BOOL)deleteWithEntity:(Entity *)entity inDatabase:(FMDatabase *)db { return NO; }
 
 @end

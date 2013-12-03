@@ -21,8 +21,8 @@
 #import <Foundation/Foundation.h>
 #import "Entity.h"
 
-//#import "NetConfig.h"       //net  server
-#import "SQLiteDatabase.h"  //data server
+#import "MKNetworkKit.h"//net  server
+#import "SHDBManage.h"  //data server
 
 
 #define DAO_REQUEST__KEY (@"dao_request_key")
@@ -70,8 +70,8 @@ typedef enum {
  @method     requestFailed
  @abstract   base
  @discussion 请求失败后，返回的代理
- @param1      请求的本类对象
- @param2      失败的相关信息，可以为空
+ param1      请求的本类对象
+ param2      失败的相关信息，可以为空
  @result      
  */
 - (void)requestFailed:(BaseDao *) dao failedInfo:(NSString*) info;

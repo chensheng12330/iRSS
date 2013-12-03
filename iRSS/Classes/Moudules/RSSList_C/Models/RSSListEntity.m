@@ -10,4 +10,31 @@
 
 @implementation RSSListEntity
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    self.strRssName = nil;
+    self.strRssUrl  = nil;
+    self.strRssClass= nil;
+    self.deAdd_time = nil;
+    [super dealloc];
+}
+
+-(NSString*) description
+{
+    NSString *superStr = [super description];
+    
+    superStr = [superStr stringByAppendingFormat:@"RssName:[%@] RssUrl:[%@] RssClass:[%@] \n \
+                unReadNum:[%d] add_time:[%@]",_strRssName,_strRssUrl,_strRssClass,_nUnReadNum,_deAdd_time];
+    
+    return superStr;
+}
 @end

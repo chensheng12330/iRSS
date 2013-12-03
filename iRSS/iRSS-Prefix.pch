@@ -15,6 +15,7 @@
 #import "BaseViewController.h"
 #import "NSFileManager+Extend.h"
 #import "SHMacroDefine.h"
+#import "NSString+SHNSStringForDate.h"
 
 #endif
 

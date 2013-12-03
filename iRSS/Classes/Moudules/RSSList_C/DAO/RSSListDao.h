@@ -10,7 +10,9 @@
 
 @interface RSSListDao : BaseDao
 
-//获取已订阅RSS数据列表
+/*
+@discussion 获取已订阅RSS数据列表
+ */
 -(NSMutableArray *) getBookRSSList;
 
 //更新数据
@@ -25,8 +27,8 @@
  @method     1
  @abstract   2
  @discussion
- @param      4
- @param      5
+ param
+ param      
  @result     6
  */
 -(BOOL)deleteRSSWithRSSID:(NSString*) strID;

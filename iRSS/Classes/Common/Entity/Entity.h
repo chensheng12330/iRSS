@@ -23,7 +23,7 @@
 @interface Entity : NSObject
 
 #define BASE_FILDS_ID (@"_id")
-@property (nonatomic, retain) NSString *strId; //记录ID
+@property (nonatomic, assign) NSInteger nId; //记录ID
 
 
 @end

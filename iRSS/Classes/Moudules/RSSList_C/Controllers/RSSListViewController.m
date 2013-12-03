@@ -17,8 +17,12 @@
 #import "HotRSSViewController.h"
 #import "SettingViewController.h"
 
-@interface RSSListViewController ()
+#import "RSSListDao.h"
+#import "RSSListEntity.h"
 
+@interface RSSListViewController ()
+@property (nonatomic, retain) NSMutableArray *dateSource;
+@property (nonatomic, retain) RSSListDao *rssListDao;
 @end
 
 @implementation RSSListViewController
@@ -28,17 +32,30 @@
     self = [super init];
     if (self) {
         [self setRestorationIdentifier:@"MMExampleCenterControllerRestorationKey"];
+        self.rssListDao = [[[RSSListDao alloc] init] autorelease];
+        //self.dateSource = nil;
     }
     return self;
+}
+- (void)dealloc
+{
+    self.rssListDao = nil;
+    self.dateSource = nil;
+    [super dealloc];
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    //get datasource from dao
+    self.dateSource = [_rssListDao getBookRSSList];
+    
+    
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    //[self.tableView setDelegate:self];
-    //[self.tableView setDataSource:self];
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
     [self.view addSubview:self.tableView];
     [self.tableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
     
@@ -134,17 +151,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return self.dateSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"MMCenterTableViewCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         
-        cell = [[MMCenterTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[MMCenterTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
         [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
     }
     
@@ -159,7 +176,9 @@
                                  blue:102.0/255.0
                                  alpha:1.0];
     
-    
+    RSSListEntity *listEnty = [self.dateSource objectAtIndex:indexPath.row];
+    cell.textLabel.text = listEnty.strRssName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"(%d)",listEnty.nUnReadNum];
     
     return cell;
 }
