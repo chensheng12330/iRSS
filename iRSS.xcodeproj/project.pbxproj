@@ -17,6 +17,7 @@
 		584AE848184C7F120009A10E /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AE83F184C7F120009A10E /* MWFeedInfo.m */; };
 		584AE849184C7F120009A10E /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AE841184C7F120009A10E /* MWFeedItem.m */; };
 		584AE84A184C7F120009A10E /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AE843184C7F120009A10E /* MWFeedParser.m */; };
+		584C519F184D840F00FE153D /* RSSListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 584C519E184D840F00FE153D /* RSSListEntity.m */; };
 		5878BA85184C234C00E3613C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5878BA84184C234C00E3613C /* QuartzCore.framework */; };
 		5878BAF3184C301D00E3613C /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 5878BA89184C301D00E3613C /* Common.m */; };
 		5878BAF4184C301D00E3613C /* class_string.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5878BA8C184C301D00E3613C /* class_string.plist */; };
@@ -118,6 +119,8 @@
 		584AE842184C7F120009A10E /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
 		584AE843184C7F120009A10E /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
 		584AE844184C7F120009A10E /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
+		584C519D184D840F00FE153D /* RSSListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSListEntity.h; sourceTree = "<group>"; };
+		584C519E184D840F00FE153D /* RSSListEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSListEntity.m; sourceTree = "<group>"; };
 		5878BA84184C234C00E3613C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5878BA88184C301D00E3613C /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		5878BA89184C301D00E3613C /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
@@ -757,6 +760,8 @@
 		5878BB31184C35A700E3613C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				584C519D184D840F00FE153D /* RSSListEntity.h */,
+				584C519E184D840F00FE153D /* RSSListEntity.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1057,6 +1062,7 @@
 				5878BB04184C301D00E3613C /* fmdb.m in Sources */,
 				58B80204184C217100A30235 /* main.m in Sources */,
 				5878BB11184C301D00E3613C /* NSData+MKBase64.m in Sources */,
+				584C519F184D840F00FE153D /* RSSListEntity.m in Sources */,
 				58B80208184C217100A30235 /* AppDelegate.m in Sources */,
 				5878BB42184C557100E3613C /* SettingViewController.m in Sources */,
 				5878BB0D184C301D00E3613C /* SHDBManage.m in Sources */,
