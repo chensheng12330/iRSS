@@ -87,6 +87,8 @@
 		58B80233184C21FF00A30235 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 58B80232184C21FF00A30235 /* Icon.png */; };
 		58CFD9CB184E14D80064454D /* irss.db in Resources */ = {isa = PBXBuildFile; fileRef = 58CFD9CA184E14D80064454D /* irss.db */; };
 		58CFD9CF184E26120064454D /* NSString+SHNSStringForDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CFD9CE184E26120064454D /* NSString+SHNSStringForDate.m */; };
+		58F6F55E184EBBF10004AA2F /* BlogListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F55D184EBBF10004AA2F /* BlogListEntity.m */; };
+		58F6F561184EBC760004AA2F /* BlogListDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F560184EBC760004AA2F /* BlogListDao.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,6 +242,10 @@
 		58CFD9CA184E14D80064454D /* irss.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = irss.db; sourceTree = "<group>"; };
 		58CFD9CD184E26120064454D /* NSString+SHNSStringForDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHNSStringForDate.h"; sourceTree = "<group>"; };
 		58CFD9CE184E26120064454D /* NSString+SHNSStringForDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHNSStringForDate.m"; sourceTree = "<group>"; };
+		58F6F55C184EBBF10004AA2F /* BlogListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogListEntity.h; sourceTree = "<group>"; };
+		58F6F55D184EBBF10004AA2F /* BlogListEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogListEntity.m; sourceTree = "<group>"; };
+		58F6F55F184EBC760004AA2F /* BlogListDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogListDao.h; sourceTree = "<group>"; };
+		58F6F560184EBC760004AA2F /* BlogListDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogListDao.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -632,6 +638,8 @@
 		5878BB21184C35A700E3613C /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				58F6F55F184EBC760004AA2F /* BlogListDao.h */,
+				58F6F560184EBC760004AA2F /* BlogListDao.m */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -639,6 +647,8 @@
 		5878BB22184C35A700E3613C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				58F6F55C184EBBF10004AA2F /* BlogListEntity.h */,
+				58F6F55D184EBBF10004AA2F /* BlogListEntity.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1050,6 +1060,7 @@
 			files = (
 				5878BAFF184C301D00E3613C /* WebInterfaceURL.m in Sources */,
 				584AE82F184C6CDF0009A10E /* RSSListTableViewCell.m in Sources */,
+				58F6F55E184EBBF10004AA2F /* BlogListEntity.m in Sources */,
 				5878BAFD184C301D00E3613C /* SHUserSetting.m in Sources */,
 				5878BAFE184C301D00E3613C /* UIDevice+Extend.m in Sources */,
 				5878BB00184C301D00E3613C /* FMDatabase.m in Sources */,
@@ -1077,6 +1088,7 @@
 				5878BAF8184C301D00E3613C /* BaseViewController.m in Sources */,
 				5878BB16184C301D00E3613C /* UIImageView+MKNetworkKitAdditions.m in Sources */,
 				584AE830184C6CDF0009A10E /* RSSLogoView.m in Sources */,
+				58F6F561184EBC760004AA2F /* BlogListDao.m in Sources */,
 				5878BB0A184C301D00E3613C /* UIViewController+MMDrawerController.m in Sources */,
 				584AE846184C7F120009A10E /* NSString+HTML.m in Sources */,
 				5878BB01184C301D00E3613C /* FMDatabaseAdditions.m in Sources */,
