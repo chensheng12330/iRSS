@@ -80,22 +80,7 @@
 	return self;
 }
 
-// Initialise with a URL
-// Mainly for historic reasons before -parseURL:
-- (id)initWithFeedURL:(NSURL *)feedURL {
-	if ((self = [self init])) {
-		
-		// Check if an string was passed as old init asked for NSString not NSURL
-		if ([feedURL isKindOfClass:[NSString class]]) {
-			feedURL = [NSURL URLWithString:(NSString *)feedURL];
-		}
-		
-		// Remember url
-		self.url = feedURL;
-		
-	}
-	return self;
-}
+
 
 - (void)dealloc {
 	[urlConnection release];
@@ -132,12 +117,65 @@
 	hasEncounteredItems = NO;
 }
 
+// Initialise with a URL
+// Mainly for historic reasons before -parseURL:
+- (id)initWithFeedURL:(NSURL *)feedURL {
+    
+    NSString *url1 = [feedURL description];
+	if ((self = [self initWithURLString:url1 params:nil httpMethod:@"GET"])) {
+		
+        NSString *userAgentString = [NSString stringWithFormat:@"%@/%@",
+                                     [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleNameKey],
+                                     [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleVersionKey]];
+        
+        [self addHeaders:@{@"User-Agent":userAgentString}];
+        
+        self.shouldSendAcceptLanguageHeader = YES;
+        
+		// Check if an string was passed as old init asked for NSString not NSURL
+		if ([feedURL isKindOfClass:[NSString class]]) {
+			feedURL = [NSURL URLWithString:(NSString *)feedURL];
+		}
+		
+		// Remember url
+		self.url = feedURL;
+		
+	}
+    
+    //设置线程block
+    
+    //请求进度
+    [self onDownloadProgressChanged:^(double progress) {
+        NSLog(@"dwonload %.2lf",progress);
+    }];
+    
+    //下载完成处理
+    MKNKResponseBlock completionHandler = ^(MKNetworkOperation* completedOperation)
+    {
+        [(MWFeedParser*)completedOperation parse];
+    };
+    
+    //下载失败处理
+    MKNKErrorBlock errorHandler = ^(NSError* error)
+    {
+        [self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed
+                          andDescription:[NSString stringWithFormat:@"connection failed to URL: %@  error:%@", url,error]];
+    };
+    
+    
+    [self onCompletion:completionHandler onError:errorHandler];
+    
+	return self;
+}
+
 // Parse using URL for backwards compatibility
 - (BOOL)parse {
 
 	// Reset
 	[self reset];
 	
+    NSData* respondData = self.responseData;
+    
 	// Perform checks before parsing
 	if (!url || !delegate) { [self parsingFailedWithErrorCode:MWErrorCodeNotInitiated 
 											   andDescription:@"Delegate or URL not specified"]; return NO; }
@@ -154,46 +192,16 @@
 	// Start
 	BOOL success = YES;
 	
-	// Request
-	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url
-												  cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData 
-											  timeoutInterval:60];
-	[request setValue:@"MWFeedParser" forHTTPHeaderField:@"User-Agent"];
-	
 	// Debug Log
-	MWLog(@"MWFeedParser: Connecting & downloading feed data");
-	
-	// Connection
-	if (connectionType == ConnectionTypeAsynchronously) {
-		
-		// Async
-		urlConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-		if (urlConnection) {
-			asyncData = [[NSMutableData alloc] init];// Create data
-		} else {
-			[self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed 
-							  andDescription:[NSString stringWithFormat:@"Asynchronous connection failed to URL: %@", url]];
-			success = NO;
-		}
-		
-	} else {
-	
-		// Sync
-		NSURLResponse *response = nil;
-		NSError *error = nil;
-		NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-		if (data && !error) {
-			[self startParsingData:data textEncodingName:[response textEncodingName]]; // Process
-		} else {
-			[self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed 
-							  andDescription:[NSString stringWithFormat:@"Synchronous connection failed to URL: %@", url]];
-			success = NO;
-		}
-		
-	}
-	
-	// Cleanup & return
-	[request release];
+	//解析数据
+    if (respondData) {
+        [self startParsingData:respondData textEncodingName:[self.readonlyResponse textEncodingName]]; // Process
+    } else {
+        [self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed  
+                          andDescription:[NSString stringWithFormat:@"Synchronous connection failed to URL: %@", url]];
+        success = NO;
+    }
+    
 	return success;
 	
 }

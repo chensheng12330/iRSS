@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RSSListEntity.h"
 
 @interface BlogListViewController : BaseViewController
 
+@property (nonatomic, retain) RSSListEntity *rssListEntity;
 @end

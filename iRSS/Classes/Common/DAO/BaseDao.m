@@ -20,6 +20,8 @@
 
 #import "BaseDao.h"
 
+
+
 @implementation BaseDao
 
 - (id)init
@@ -30,6 +32,12 @@
         
         _userInfo     = [[NSMutableDictionary alloc] init];
         _reqPIDQueues = [[NSMutableArray alloc] init];
+    }
+    @synchronized(self)
+    {
+        if (mkNetReqEngine ==NULL) {
+            mkNetReqEngine = [[MKNetworkEngine alloc] initWithHostName:@"baidu.com"];
+        }
     }
     return self;
 }

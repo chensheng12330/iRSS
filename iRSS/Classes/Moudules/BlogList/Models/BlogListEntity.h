@@ -23,4 +23,13 @@
 
 @interface BlogListEntity : Entity
 
+@property (nonatomic, copy) NSString *strIdentifier;
+@property (nonatomic, copy) NSString *strTitle;
+@property (nonatomic, copy) NSString *strLink;
+@property (nonatomic, copy) NSDate *deDate;
+@property (nonatomic, copy) NSDate *deUpdated;
+@property (nonatomic, copy) NSString *strSummary;
+@property (nonatomic, copy) NSString *strContent;
+@property (nonatomic, copy) NSArray *strEnclosures;
+@property (nonatomic, assign)BOOL bIsRead; //是否已读
 @end

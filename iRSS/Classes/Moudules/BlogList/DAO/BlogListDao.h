@@ -23,4 +23,7 @@
 
 @interface BlogListDao : BaseDao
 
+//根据RSS_URL获取博客列表
+-(void) asynGetBlogListWithRSSUrl:(NSString*) strRssUrl;
+
 @end

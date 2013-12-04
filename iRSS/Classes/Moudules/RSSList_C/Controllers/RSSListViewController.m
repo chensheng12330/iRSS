@@ -17,6 +17,8 @@
 #import "HotRSSViewController.h"
 #import "SettingViewController.h"
 
+#import "BlogListViewController.h"
+
 #import "RSSListDao.h"
 #import "RSSListEntity.h"
 
@@ -187,7 +189,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    RSSListEntity *listEnty = [self.dateSource objectAtIndex:indexPath.row];
+    BlogListViewController *blogListVC = [[BlogListViewController alloc] init];
+    blogListVC.rssListEntity = listEnty;
+    [self.navigationController pushViewController:blogListVC animated:YES];
 }
 
 #pragma mark - Button Handlers

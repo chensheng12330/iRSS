@@ -81,8 +81,7 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 	id <MWFeedParserDelegate> delegate;
 	
 	// Connection
-	NSURLConnection *urlConnection;
-	NSMutableData *asyncData;
+
 	NSString *asyncTextEncodingName;
 	ConnectionType connectionType;
 	

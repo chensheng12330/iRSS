@@ -10,4 +10,9 @@
 
 @implementation BlogListDao
 
+-(void) asynGetBlogListWithRSSUrl:(NSString*) strRssUrl
+{
+    MWFeedParser *feedPar = [[MWFeedParser alloc] initWithFeedURL:[NSURL URLWithString:strRssUrl]];
+    [mkNetReqEngine enqueueOperation:feedPar];
+}
 @end

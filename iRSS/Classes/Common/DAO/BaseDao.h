@@ -23,7 +23,7 @@
 
 #import "MKNetworkKit.h"//net  server
 #import "SHDBManage.h"  //data server
-
+#import "MWFeedParser.h"
 
 #define DAO_REQUEST__KEY (@"dao_request_key")
 
@@ -79,6 +79,8 @@ typedef enum {
 
 
 #define DAO_FLAG_REQ (@"request_tag")  //请求tag标识
+
+static MKNetworkEngine *mkNetReqEngine;
 
 @interface BaseDao : NSObject
 {

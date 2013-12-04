@@ -7,26 +7,34 @@
 //
 
 #import "BlogListViewController.h"
+#import "BlogListDao.h"
 
 @interface BlogListViewController ()
-
+@property (nonatomic, retain) BlogListDao *blogListDao;
 @end
 
 @implementation BlogListViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        _blogListDao = [[BlogListDao alloc] init];
     }
     return self;
 }
 
+- (void)dealloc
+{
+    self.rssListEntity = nil;
+    self.blogListDao   = nil;
+    [super dealloc];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [_blogListDao asynGetBlogListWithRSSUrl:self.rssListEntity.strRssUrl];
 }
 
 - (void)didReceiveMemoryWarning
