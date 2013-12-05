@@ -40,8 +40,8 @@
 - (NSString *)description {
 	NSMutableString *string = [[NSMutableString alloc] initWithString:@"MWFeedInfo: "];
 	if (title)   [string appendFormat:@"“%@”", EXCERPT(title, 50)];
-	//if (link)    [string appendFormat:@" (%@)", link];
-	//if (summary) [string appendFormat:@", %@", MWExcerpt(summary, 50)];
+	if (link)    [string appendFormat:@" (%@)", link];
+	if (summary) [string appendFormat:@", %@", EXCERPT(summary, 50)];
 	return [string autorelease];
 }
 

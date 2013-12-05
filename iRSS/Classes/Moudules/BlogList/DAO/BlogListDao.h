@@ -20,10 +20,15 @@
 //---------------------------------------------------------
 
 #import "BaseDao.h"
+#import "BlogListEntity.h"
 
-@interface BlogListDao : BaseDao
+@interface BlogListDao : BaseDao<MWFeedParserDelegate>
 
 //根据RSS_URL获取博客列表
--(void) asynGetBlogListWithRSSUrl:(NSString*) strRssUrl;
+-(void) asynGetBlogListWithRSSUrl:(NSString*) strRssUrl RSSID:(NSInteger) pid;
 
+//从数据库中获取博客列表数据
+-(NSMutableArray*)  synchGetBlogListFromDBWithRSSID:(NSInteger) pid;
+
+-(BOOL) saveBlogListInfoToDBWithBlogListEntity:(BlogListEntity*)blogListInfo;
 @end

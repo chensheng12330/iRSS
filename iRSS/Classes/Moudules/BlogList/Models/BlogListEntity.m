@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.bIsRead = NO;
+        self.nRSSID  = rand();
     }
     return self;
 }
@@ -37,9 +38,7 @@
 -(NSString*) description
 {
     NSString *superStr = [super description];
-    superStr = [superStr stringByAppendingFormat:@" Title:[%@] Link:[%@] Summary:[%@]\
-                Content:[%@] Date:[%@] Update:[%@]\
-                Enclosures:[%@] Identiffire:[%@] isRead:[%d]",_strTitle,_strLink,_strSummary,_strContent,_deDate,_deUpdated,_strEnclosures,_strIdentifier,_bIsRead];
+    superStr = [superStr stringByAppendingFormat:@"nRSSID:[%d] \nTitle:[%@] Link:[%@] Summary:[%@] \nContent:[%@] Date:[%@] Update:[%@]\nEnclosures:[%@] Identiffire:[%@] isRead:[%d]",_nRSSID,_strTitle,_strLink,_strSummary,_strContent,_deDate,_deUpdated,_strEnclosures,_strIdentifier,_bIsRead];
     
     return superStr;
 }

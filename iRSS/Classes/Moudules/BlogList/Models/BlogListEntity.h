@@ -22,7 +22,7 @@
 #import "Entity.h"
 
 @interface BlogListEntity : Entity
-
+@property (nonatomic, assign) NSInteger nRSSID;//当前所属RSS ID
 @property (nonatomic, copy) NSString *strIdentifier;
 @property (nonatomic, copy) NSString *strTitle;
 @property (nonatomic, copy) NSString *strLink;
