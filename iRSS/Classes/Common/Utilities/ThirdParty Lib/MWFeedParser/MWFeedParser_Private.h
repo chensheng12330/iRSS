@@ -33,8 +33,6 @@
 
 // Feed Downloading Properties
 @property (nonatomic, copy) NSURL *url;
-@property (nonatomic, retain) NSURLConnection *urlConnection;
-@property (nonatomic, retain) NSMutableData *asyncData;
 @property (nonatomic, retain) NSString *asyncTextEncodingName;
 
 // Parsing Properties

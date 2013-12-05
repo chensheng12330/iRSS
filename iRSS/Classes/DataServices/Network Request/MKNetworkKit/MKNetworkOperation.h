@@ -464,7 +464,7 @@ typedef enum {
  *  isCachedResponse
  *  addCompletionHandler:errorHandler:
  */
--(void) onCompletion:(MKNKResponseBlock) response onError:(MKNKErrorBlock) error DEPRECATED_ATTRIBUTE;
+-(void) onCompletion:(MKNKResponseBlock) response onError:(MKNKErrorBlock) error;
 
 /*!
  *  @abstract adds a block Handler for completion and error

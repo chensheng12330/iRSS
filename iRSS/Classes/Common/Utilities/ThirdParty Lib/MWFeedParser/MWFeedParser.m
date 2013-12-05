@@ -49,8 +49,8 @@
 @implementation MWFeedParser
 
 // Properties
-@synthesize url, delegate;
-@synthesize urlConnection, asyncData, asyncTextEncodingName, connectionType;
+@synthesize url,delegate;
+@synthesize asyncTextEncodingName, connectionType;
 @synthesize feedParseType, feedParser, currentPath, currentText, currentElementAttributes, item, info;
 @synthesize pathOfElementWithXHTMLType;
 @synthesize stopped, failed, parsing;
@@ -83,8 +83,6 @@
 
 
 - (void)dealloc {
-	[urlConnection release];
-	[url release];
 	[feedParser release];
 	[dateFormatterRFC822 release];
 	[dateFormatterRFC3339 release];
@@ -103,9 +101,7 @@
 // Reset data variables before processing
 // Exclude parse state variables as they are needed after parse
 - (void)reset {
-	self.asyncData = nil;
 	self.asyncTextEncodingName = nil;
-	self.urlConnection = nil;
 	feedType = FeedTypeUnknown;
 	self.currentPath = @"/";
 	self.currentText = [[[NSMutableString alloc] init] autorelease];
@@ -122,14 +118,8 @@
 - (id)initWithFeedURL:(NSURL *)feedURL {
     
     NSString *url1 = [feedURL description];
-	if ((self = [self initWithURLString:url1 params:nil httpMethod:@"GET"])) {
-		
-        NSString *userAgentString = [NSString stringWithFormat:@"%@/%@",
-                                     [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleNameKey],
-                                     [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleVersionKey]];
-        
-        [self addHeaders:@{@"User-Agent":userAgentString}];
-        
+	if ((self = [super initWithURLString:url1 params:nil httpMethod:@"GET"])) {
+
         self.shouldSendAcceptLanguageHeader = YES;
         
 		// Check if an string was passed as old init asked for NSString not NSURL
@@ -139,11 +129,10 @@
 		
 		// Remember url
 		self.url = feedURL;
-		
 	}
     
     //设置线程block
-    
+   
     //请求进度
     [self onDownloadProgressChanged:^(double progress) {
         NSLog(@"dwonload %.2lf",progress);
@@ -161,6 +150,7 @@
         [self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed
                           andDescription:[NSString stringWithFormat:@"connection failed to URL: %@  error:%@", url,error]];
     };
+    
     
     
     [self onCompletion:completionHandler onError:errorHandler];
@@ -323,9 +313,7 @@
 		stopped = YES;
 		
 		// Stop downloading
-		[urlConnection cancel];
-		self.urlConnection = nil;
-		self.asyncData = nil;
+
 		self.asyncTextEncodingName = nil;
 		
 		// Abort
@@ -391,49 +379,6 @@
 		
 	}
 	
-}
-
-#pragma mark -
-#pragma mark NSURLConnection Delegate (Async)
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-	[asyncData setLength:0];
-	self.asyncTextEncodingName = [response textEncodingName];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	[asyncData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-	
-	// Failed
-	self.urlConnection = nil;
-	self.asyncData = nil;
-	self.asyncTextEncodingName = nil;
-	
-    // Error
-	[self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed andDescription:[error localizedDescription]];
-	
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	
-	// Succeed
-	MWLog(@"MWFeedParser: Connection successful... received %d bytes of data", [asyncData length]);
-	
-	// Parse
-	if (!stopped) [self startParsingData:asyncData textEncodingName:self.asyncTextEncodingName];
-	
-    // Cleanup
-    self.urlConnection = nil;
-    self.asyncData = nil;
-	self.asyncTextEncodingName = nil;
-
-}
-
--(NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse {
-	return nil; // Don't cache
 }
 
 #pragma mark -

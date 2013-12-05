@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5826E6A5185013A600750A26 /* MKNetworkEngineEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5826E6A4185013A600750A26 /* MKNetworkEngineEx.m */; };
 		584AE82A184C6CA80009A10E /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AE829184C6CA80009A10E /* MMTableViewCell.m */; };
 		584AE82F184C6CDF0009A10E /* RSSListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AE82C184C6CDF0009A10E /* RSSListTableViewCell.m */; };
 		584AE830184C6CDF0009A10E /* RSSLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AE82E184C6CDF0009A10E /* RSSLogoView.m */; };
@@ -102,6 +103,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5826E6A3185013A600750A26 /* MKNetworkEngineEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngineEx.h; sourceTree = "<group>"; };
+		5826E6A4185013A600750A26 /* MKNetworkEngineEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngineEx.m; sourceTree = "<group>"; };
 		584AE828184C6CA80009A10E /* MMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewCell.h; sourceTree = "<group>"; };
 		584AE829184C6CA80009A10E /* MMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewCell.m; sourceTree = "<group>"; };
 		584AE82B184C6CDF0009A10E /* RSSListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSListTableViewCell.h; sourceTree = "<group>"; };
@@ -533,6 +536,8 @@
 			isa = PBXGroup;
 			children = (
 				5878BAD2184C301D00E3613C /* MKNetworkKit */,
+				5826E6A3185013A600750A26 /* MKNetworkEngineEx.h */,
+				5826E6A4185013A600750A26 /* MKNetworkEngineEx.m */,
 			);
 			path = "Network Request";
 			sourceTree = "<group>";
@@ -1101,6 +1106,7 @@
 				5878BB0D184C301D00E3613C /* SHDBManage.m in Sources */,
 				5878BB05184C301D00E3613C /* FMResultSet.m in Sources */,
 				584AE845184C7F120009A10E /* NSDate+InternetDateTime.m in Sources */,
+				5826E6A5185013A600750A26 /* MKNetworkEngineEx.m in Sources */,
 				5878BB45184C559C00E3613C /* BlogListViewController.m in Sources */,
 				5878BB13184C301D00E3613C /* NSDictionary+RequestEncoding.m in Sources */,
 				5878BB15184C301D00E3613C /* UIAlertView+MKNetworkKitAdditions.m in Sources */,

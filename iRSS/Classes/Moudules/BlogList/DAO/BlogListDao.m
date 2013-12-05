@@ -13,6 +13,7 @@
 -(void) asynGetBlogListWithRSSUrl:(NSString*) strRssUrl
 {
     MWFeedParser *feedPar = [[MWFeedParser alloc] initWithFeedURL:[NSURL URLWithString:strRssUrl]];
-    [mkNetReqEngine enqueueOperation:feedPar];
+    [MKNET enqueueOperation:feedPar];
+
 }
 @end
