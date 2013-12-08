@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "RSSListEntity.h"
+#import "BlogListDao.h"
 
-@interface BlogListViewController : BaseViewController
+@interface BlogListViewController : BaseViewController<DataServeDelegate,
+UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, retain) RSSListEntity *rssListEntity;
 @end

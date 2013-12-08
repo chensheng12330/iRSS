@@ -114,7 +114,7 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 }
 
 #pragma mark Public Properties
-@property (nonatomic, assign) NSInteger nPID; //唯一身份标识
+@property (nonatomic, assign) NSInteger nPID; //RSS_URL请求唯一身份标识
 
 // Delegate to recieve data as it is parsed
 @property (nonatomic, assign) id <MWFeedParserDelegate> delegate;

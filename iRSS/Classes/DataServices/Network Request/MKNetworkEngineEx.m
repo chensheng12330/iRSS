@@ -17,10 +17,10 @@ static MKNetworkEngineEx *mkNetReqEngineEx;
     @synchronized(self)
     {
         if (mkNetReqEngineEx ==NULL) {
-            mkNetReqEngineEx = [[self alloc] initWithHostName:@"google.com.hk"];
+            mkNetReqEngineEx = [[MKNetworkEngineEx alloc] initWithHostName:@"google.com.hk"];
             mkNetReqEngineEx.opersInfoDict  = [[[NSMutableDictionary alloc] initWithCapacity:3] autorelease];
         }
     }
-    return self;
+    return mkNetReqEngineEx;
 }
 @end

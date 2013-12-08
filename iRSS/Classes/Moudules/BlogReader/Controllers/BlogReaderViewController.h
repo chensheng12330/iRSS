@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HMSideMenu.h"
+#import "QuadCurveMenu.h"
 
 @interface BlogReaderViewController : BaseViewController
+<UIWebViewDelegate,UIGestureRecognizerDelegate,QuadCurveMenuDelegate>
 
+@property (nonatomic, retain) NSString *strUrlLink;
 @end

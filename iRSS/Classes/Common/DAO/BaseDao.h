@@ -53,14 +53,14 @@ typedef enum {
 @protocol DataServeDelegate <NSObject>
 
 /*!
- @method     requestFinished
- @abstract   base
- @discussion delegate，返回成功后的代理
- @param1    请求的本类对象
- @param2    请求的数据来源
- @param3    请求返回的数据类型，字符串描述
- @param4    请求返回的具体数据
- @result 
+ *@method     requestFinished
+ *@abstract   base
+ *@discussion delegate，返回成功后的代理
+ *param1    请求的本类对象
+ *param2    请求的数据来源
+ *param3    请求返回的数据类型，字符串描述
+ *param4    请求返回的具体数据
+ *@result
  */
 - (void)requestFinished:(BaseDao *)  dao
              dataOrigin:(DataOrigin) dataOrigin

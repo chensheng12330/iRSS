@@ -16,7 +16,7 @@
 #import "NSFileManager+Extend.h"
 #import "SHMacroDefine.h"
 #import "NSString+SHNSStringForDate.h"
-
+#import "NSString+HTML.h"
 #endif
 
 static BOOL OSVersionIsAtLeastiOS7() {

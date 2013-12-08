@@ -30,5 +30,8 @@
 //从数据库中获取博客列表数据
 -(NSMutableArray*)  synchGetBlogListFromDBWithRSSID:(NSInteger) pid;
 
+//存放数据
 -(BOOL) saveBlogListInfoToDBWithBlogListEntity:(BlogListEntity*)blogListInfo;
+
+-(BOOL) updateBlogInfoWithBlogListEntity:(BlogListEntity*)blogListInfo;
 @end
