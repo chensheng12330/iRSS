@@ -35,6 +35,8 @@
 }
 
 -(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    
+    //test
 
     UIViewController * leftSideDrawerViewController = [[HotRSSViewController alloc] init];
     UIViewController * rightSideDrawerViewController= [[SettingViewController alloc] init];
