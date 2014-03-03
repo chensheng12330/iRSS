@@ -35,6 +35,7 @@
     [_tvSummary setFont:[UIFont systemFontOfSize:13]];
     [_tvSummary setTextColor:[UIColor blueColor]];
     [_tvSummary setEditable:NO];
+    //[_tvSummary setUserInteractionEnabled:NO];
     
     [self addSubview:_tvSummary];
     return self;

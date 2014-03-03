@@ -67,6 +67,8 @@
     [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     
+    COM.mmDrawerControl = self.drawerController;
+    
     [self.drawerController
      setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
          MMDrawerControllerDrawerVisualStateBlock block;
@@ -76,7 +78,9 @@
              block(drawerController, drawerSide, percentVisible);
          }
      }];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     if(OSVersionIsAtLeastiOS7()){
         UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
                                               green:173.0/255.0

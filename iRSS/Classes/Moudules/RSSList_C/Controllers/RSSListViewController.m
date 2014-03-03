@@ -112,6 +112,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    COM.mmDrawerControl.enablePan = YES;
     NSLog(@"Center will appear");
 }
 
@@ -192,6 +193,8 @@
     RSSListEntity *listEnty = [self.dateSource objectAtIndex:indexPath.row];
     BlogListViewController *blogListVC = [[BlogListViewController alloc] init];
     blogListVC.rssListEntity = listEnty;
+    
+    COM.mmDrawerControl.enablePan = NO;
     [self.navigationController pushViewController:blogListVC animated:YES];
 }
 

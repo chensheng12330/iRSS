@@ -913,6 +913,10 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
 }
 
 -(void)panGestureCallback:(UIPanGestureRecognizer *)panGesture{
+    if (!self.enablePan) {
+        return;
+    }
+    
     switch (panGesture.state) {
         case UIGestureRecognizerStateBegan:
             self.startingPanRect = self.centerContainerView.frame;

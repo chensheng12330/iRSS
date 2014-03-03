@@ -97,6 +97,11 @@ typedef void (^MMDrawerControllerDrawerVisualStateBlock)(MMDrawerController * dr
 
 @interface MMDrawerController : UIViewController
 
+//使能
+//add with sherwin.chen on 2013.12.24
+@property (nonatomic, assign) BOOL enablePan;
+//add code end
+
 ///---------------------------------------
 /// @name Accessing Drawer Container View Controller Properties
 ///---------------------------------------

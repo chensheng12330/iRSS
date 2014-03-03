@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MMDrawerController.h"
 //#define MVC_MODE 1
 
 #define COM [Common sharedCommon]
@@ -16,7 +17,7 @@
 
 
 @interface Common : NSObject
-
+@property (nonatomic, assign) MMDrawerController* mmDrawerControl;
 
 +(Common*) sharedCommon;
 
