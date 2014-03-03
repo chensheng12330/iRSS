@@ -33,5 +33,9 @@
 //存放数据
 -(BOOL) saveBlogListInfoToDBWithBlogListEntity:(BlogListEntity*)blogListInfo;
 
+//更新数据
 -(BOOL) updateBlogInfoWithBlogListEntity:(BlogListEntity*)blogListInfo;
+
+//获取未读的博客数目
++(NSInteger) getUnreadBlogCount;
 @end

@@ -54,7 +54,6 @@
     //get datasource from dao
     self.dateSource = [_rssListDao getBookRSSList];
     
-    
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];

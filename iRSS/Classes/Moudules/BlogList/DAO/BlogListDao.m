@@ -200,4 +200,23 @@
     return YES;
 }
 
++(NSInteger) getUnreadBlogCount:(NSInteger) nRssID
+{
+
+    NSAssert(nRssID<0, @"rss_id not <0");
+
+    FMDatabase *db = SHDBM.db;
+    DBMQuickCheck(db);
+    
+    FMResultSet *rs =nil;
+    rs = [db executeQuery:@"select count(*) from BlogInfoTable where is_read=0 and rss_id=?",[NSNumber numberWithInteger:nRssID]];
+    
+    NSInteger unReadNum=0;
+    if ([rs next]) {
+        
+        unReadNum = [rs intForColumnIndex:0];
+        [rs close];
+    }
+    return unReadNum;
+}
 @end
