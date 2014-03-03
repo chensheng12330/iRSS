@@ -28,12 +28,15 @@
         
         [self addSubview:lab];
     }
-    [_lbDate  setTextColor:[UIColor orangeColor]];
+    
+    [_lbTitile setTextColor:[UIColor colorWithRed:30/255.0 green:15/255.0 blue:190/255.0 alpha:1]];
+    [_lbDate   setTextColor:[UIColor grayColor]];
+    [_lbCreator setTextColor:[UIColor colorWithRed:0/255.0 green:102/255.0 blue:33/255.0 alpha:1] ];
     
     _tvSummary= [[UITextView alloc] initWithFrame:CGRectMake(13, 18, 287, 71)];
     [_tvSummary setBackgroundColor:[UIColor clearColor]];
     [_tvSummary setFont:[UIFont systemFontOfSize:13]];
-    [_tvSummary setTextColor:[UIColor blueColor]];
+    [_tvSummary setTextColor:[UIColor blackColor]];
     [_tvSummary setEditable:NO];
     //[_tvSummary setUserInteractionEnabled:NO];
     

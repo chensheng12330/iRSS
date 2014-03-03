@@ -118,6 +118,7 @@
 - (id)initWithFeedURL:(NSURL *)feedURL {
     
     NSString *url1 = [feedURL description];
+    //url1 = url1
 	if ((self = [super initWithURLString:url1 params:nil httpMethod:@"GET"])) {
 
         self.shouldSendAcceptLanguageHeader = YES;

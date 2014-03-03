@@ -12,7 +12,11 @@
 
 -(void) asynGetBlogListWithRSSUrl:(NSString*) strRssUrl  RSSID:(NSInteger) pid
 {
-    MWFeedParser *feedPar = [[MWFeedParser alloc] initWithFeedURL:[NSURL URLWithString:strRssUrl]];
+    
+    NSString* string2 = [strRssUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL *url = [NSURL URLWithString:string2];
+    
+    MWFeedParser *feedPar = [[MWFeedParser alloc] initWithFeedURL:url];
     feedPar.nPID = pid;
     feedPar.delegate = self;
     [MKNET enqueueOperation:feedPar];
@@ -80,7 +84,7 @@
     DBMQuickCheck(db);
     FMResultSet *rs =nil;
     
-    rs = [db executeQuery:@"select * from BlogInfoTable order by date desc "];
+    rs = [db executeQuery:@"select * from BlogInfoTable where rss_id=? order by date desc ",[NSNumber numberWithInt:pid]];
     
     //get query db log
     DEBUG_DB_ERROR_LOG;

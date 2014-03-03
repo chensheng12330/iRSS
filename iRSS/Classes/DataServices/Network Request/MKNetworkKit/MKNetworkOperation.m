@@ -686,6 +686,7 @@ OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,
             }
         }
         
+        NSLog(@"Request URL: %@",finalURL);
         self.request = [NSMutableURLRequest requestWithURL:finalURL
                                                cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                            timeoutInterval:kMKNetworkKitRequestTimeOutInSeconds];
