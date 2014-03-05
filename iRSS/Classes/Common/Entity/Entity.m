@@ -38,7 +38,8 @@
 -(NSString*) description
 {
     NSString *superStr = [super description];
-    superStr = [superStr stringByAppendingFormat:@"id:[%d] ",_nId];
+    
+    superStr = [superStr stringByAppendingFormat:@"{%@} id:[%d] ",NSStringFromClass([self class]),_nId];
     return superStr;
 }
 @end
