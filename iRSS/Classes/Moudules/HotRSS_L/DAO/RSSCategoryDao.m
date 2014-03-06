@@ -8,6 +8,11 @@
 
 #import "RSSCategoryDao.h"
 
+@interface  RSSCategory()
+
+//表中是否存在该id记录
+-(BOOL) isExistID:(int) nCateID;
+@end
 
 @implementation RSSCategory
 
@@ -45,4 +50,54 @@
     return returnArrVal;
 }
 
+-(BOOL) isExistID:(int) nCateID
+{
+    FMDatabase *db = SHDBM.db;
+    DBMQuickCheck(db && (nCateID>0));
+    FMResultSet *rs =nil;
+    rs = [db executeQuery:@"select count(*) from RSSGroup where id=?",@(nCateID)];
+    if ([rs next]) {
+        [rs close];
+        return YES;
+    }
+    return NO;
+}
+
+-(BOOL) addForRSSCategoryEntity:(RSSCategoryEntity*) rssCateEntity
+{
+    FMDatabase *db = SHDBM.db;
+    DBMQuickCheck((db && rssCateEntity));
+    
+    if (![self isExistID:rssCateEntity.nId]) { return NO; }
+    
+    //add to BlogListTable
+    BOOL dbStatu =[db executeUpdate:@"insert into RSSGroup( \
+     name, \
+     number,\
+     icon_name) \
+     values (?,?,?)",
+     rssCateEntity.strName,
+     @(rssCateEntity.nRssNum),
+     rssCateEntity.strIconName
+     ];
+    
+    //获取id值，填入rsscateEntity中去
+    
+    //操作
+    
+    //get add db log
+    DEBUG_DB_ERROR_LOG;
+
+    return dbStatu;
+}
+
+-(BOOL) delRSSGroupRecWithCateID:(NSInteger) nID
+{
+    return YES;
+}
+
+-(BOOL) updateRSSGroupRecWithRSEntity:(RSSCategoryEntity*) rssCateEntity fileds:(int) type
+{
+    return YES;
+}
 @end

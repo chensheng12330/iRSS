@@ -25,6 +25,14 @@
 #import "BaseDao.h"
 #import "RSSCategoryEntity.h"
 
+typedef enum
+{
+    RGF_ID  =1<<0,
+    RGF_NAME=1<<1,
+    RGF_NUM =1<<2,
+    RGF_ICON=1<<3
+}RSSGroupFileds;
+
 @interface RSSCategory : BaseDao
 
 //******查找
@@ -32,8 +40,8 @@
 /*!
  @header 获取所有的RSS目录列表
  @abstract BaseDao
- @return   NSArray[NSMutableArray]
- @see reference
+ @return   (NSArray*) 返回RSSCategoryEntity数组对象
+ @see
  @author   sherwin.chen
  @version  1.0.0
  */
@@ -43,11 +51,35 @@
 /*!
  @header   增加一条记录到RSSGroup表中
  @par1     rssCateEntity RSS目录夹实体对象
- @abstract <#property#>
- @return   <#property#>
- @see      <#property#>
- @author   <#property#>
- @version  <#property#>
+ @abstract RSSCategory
+ @return   (BOOL) 操作是否成功
+ @see
+ @author   sherwin.chen
+ @version  1.0.0
  */
 -(BOOL) addForRSSCategoryEntity:(RSSCategoryEntity*) rssCateEntity;
+
+//删
+/*!
+ @header   据据rss_category_id值删除对应的表记录
+ @abstract RSSCategory
+ @par      nID:RSSGroup 主键值，唯一id.
+ @return   (BOOL) 操作是否成功
+ @see
+ @author   sherwin.chen
+ @version  1.0.0
+ */
+-(BOOL) delRSSGroupRecWithCateID:(NSInteger) nID;
+
+//改
+/*!
+ @header   修改RSSGroup表中对应id的字段信息，提供字段可选位[RSSGroupFileds]
+ @par      Par1| rssCateEntity : RSS目录夹实体对象
+ @par      Par2| fileds : 需要修改的字段位选,提供RSSGroupFileds位合并 如: RGF_ID|RGF_NAME
+ @return   (BOOL) 操作是否成功
+ @see
+ @author   sherwin.chen
+ @version  1.0.0
+ */
+-(BOOL) updateRSSGroupRecWithRSEntity:(RSSCategoryEntity*) rssCateEntity fileds:(int) type;
 @end
