@@ -36,6 +36,15 @@
 //use dlog to print while in debug model
 #define DEBUG 1
 #ifdef DEBUG
+//War0-5: 0级最高
+/*
+ War-0:0级 最高，内部运行错误，影响到app crash。包括，内存地址错误，运行时错误。
+ War-1:1级,内部逻辑错误，会影响到数据的正确性，可能会引发app crash。包括，指针为空，无法取出数据，状态值。
+ War-2:2级,可能会引发内存泄露的错误
+ War-3:3级,可能会引发CPU高速运行，以及设备操作失败，硬件性tristate[三态]
+ War-4:4级,网络请求性错误
+ War-5:5级,数据库操作性错误。
+ */
 #   define DLog(fmt, ...) {NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}
 #   define ELog(err) {if(err) DLog(@"%@", err)}
 #else

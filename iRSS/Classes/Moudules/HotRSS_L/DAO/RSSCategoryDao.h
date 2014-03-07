@@ -33,7 +33,7 @@ typedef enum
     RGF_ICON=1<<3
 }RSSGroupFileds;
 
-@interface RSSCategory : BaseDao
+@interface RSSCategoryDao : BaseDao
 
 //******查找
 

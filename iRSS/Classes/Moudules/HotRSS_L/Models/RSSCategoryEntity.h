@@ -31,4 +31,11 @@
 @property (nonatomic, copy) NSString *strName;      //分类名
 @property (nonatomic, copy) NSString *strIconName;  //分类icon图标
 @property (nonatomic, assign) NSInteger nRssNum;    //rss条数目
+
+//Runtime:
+// http://www.cocoachina.com/bbs/read.php?tid=97773
+// http://www.cocoachina.com/bbs/simple/?t97803.html
+
+-(id) initWithDictionary:(NSDictionary*) dict;
+
 @end

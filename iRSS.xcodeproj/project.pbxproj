@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5826E6A5185013A600750A26 /* MKNetworkEngineEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5826E6A4185013A600750A26 /* MKNetworkEngineEx.m */; };
+		5847332418C973BD00A9959A /* TestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847332318C973BD00A9959A /* TestBase.m */; };
+		5847332718C9741F00A9959A /* DBTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847332618C9741F00A9959A /* DBTestCase.m */; };
 		584AE82A184C6CA80009A10E /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AE829184C6CA80009A10E /* MMTableViewCell.m */; };
 		584AE82F184C6CDF0009A10E /* RSSListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AE82C184C6CDF0009A10E /* RSSListTableViewCell.m */; };
 		584AE830184C6CDF0009A10E /* RSSLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AE82E184C6CDF0009A10E /* RSSLogoView.m */; };
@@ -147,6 +149,10 @@
 /* Begin PBXFileReference section */
 		5826E6A3185013A600750A26 /* MKNetworkEngineEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngineEx.h; sourceTree = "<group>"; };
 		5826E6A4185013A600750A26 /* MKNetworkEngineEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngineEx.m; sourceTree = "<group>"; };
+		5847332218C973BD00A9959A /* TestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestBase.h; path = TestCase/TestBase.h; sourceTree = "<group>"; };
+		5847332318C973BD00A9959A /* TestBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestBase.m; path = TestCase/TestBase.m; sourceTree = "<group>"; };
+		5847332518C9741F00A9959A /* DBTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTestCase.h; sourceTree = "<group>"; };
+		5847332618C9741F00A9959A /* DBTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTestCase.m; sourceTree = "<group>"; };
 		584AE828184C6CA80009A10E /* MMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewCell.h; sourceTree = "<group>"; };
 		584AE829184C6CA80009A10E /* MMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewCell.m; sourceTree = "<group>"; };
 		584AE82B184C6CDF0009A10E /* RSSListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSListTableViewCell.h; sourceTree = "<group>"; };
@@ -392,6 +398,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5847332118C9737D00A9959A /* TestCase */ = {
+			isa = PBXGroup;
+			children = (
+				5847332218C973BD00A9959A /* TestBase.h */,
+				5847332318C973BD00A9959A /* TestBase.m */,
+				5847332518C9741F00A9959A /* DBTestCase.h */,
+				5847332618C9741F00A9959A /* DBTestCase.m */,
+			);
+			name = TestCase;
+			sourceTree = "<group>";
+		};
 		584AE835184C7F120009A10E /* MWFeedParser */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,11 +550,12 @@
 			isa = PBXGroup;
 			children = (
 				5878BA87184C301D00E3613C /* Common */,
+				5878BAEA184C301D00E3613C /* Moudules */,
 				5878BAC6184C301D00E3613C /* DataServices */,
 				5878BAE7184C301D00E3613C /* Dependencies */,
-				5878BAEA184C301D00E3613C /* Moudules */,
 				5878BAF0184C301D00E3613C /* Project Document */,
 				5878BAF2184C301D00E3613C /* Resource Files */,
+				5847332118C9737D00A9959A /* TestCase */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1340,6 +1358,7 @@
 				5878BB1E184C324F00E3613C /* MMDrawerVisualStateManager.m in Sources */,
 				5878BB08184C301D00E3613C /* MMDrawerController.m in Sources */,
 				5895660118C71A1D0045EED7 /* RSSCategoryDao.m in Sources */,
+				5847332418C973BD00A9959A /* TestBase.m in Sources */,
 				584EA0BE18546BAC00964DC0 /* BackInOut.m in Sources */,
 				5878BB3C184C37FB00E3613C /* HotRSSViewController.m in Sources */,
 				5878BAF3184C301D00E3613C /* Common.m in Sources */,
@@ -1354,6 +1373,7 @@
 				584EA0C618546BAC00964DC0 /* GestureRecognizerBlocks.m in Sources */,
 				584EA0C718546BAC00964DC0 /* PopInOut.m in Sources */,
 				584AE830184C6CDF0009A10E /* RSSLogoView.m in Sources */,
+				5847332718C9741F00A9959A /* DBTestCase.m in Sources */,
 				58F6F561184EBC760004AA2F /* BlogListDao.m in Sources */,
 				5878BB0A184C301D00E3613C /* UIViewController+MMDrawerController.m in Sources */,
 				584AE846184C7F120009A10E /* NSString+HTML.m in Sources */,

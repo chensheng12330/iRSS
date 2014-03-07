@@ -10,8 +10,14 @@
 
 #import "AppDelegate.h"
 
+//测试
+#import "DBTestCase.h"
+
 int main(int argc, char *argv[])
 {
+    DBTestCase *test = [[[DBTestCase alloc] init] autorelease];
+    [test testGo];
+    
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

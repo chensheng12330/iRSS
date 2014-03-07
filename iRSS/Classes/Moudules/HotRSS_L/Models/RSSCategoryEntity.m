@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        self.strIconName    = nil;
+        self.strIconName    = @"icon";
         self.strName        = nil;
         self.nRssNum        = 0;
     }
@@ -27,6 +27,28 @@
     self.nRssNum = 0;
     self.strName = nil;
     self.strIconName=nil;
+}
+
+-(id) initWithDictionary:(NSDictionary*) dict
+{
+    if (dict==NULL) {
+        DLog(@"War2: Dictionary cannot is NULL.");
+        return nil;
+    }
+    self = [self init];
+    
+    self.nId            = [[dict objectForKey:@"id"] integerValue];
+    self.nRssNum        = [[dict objectForKey:@"rssNum"] integerValue];
+    self.strName        = [dict objectForKey:@"name"];
+    self.strIconName    = [dict objectForKey:@"iconName"];
+    
+    return self;
+}
+
+//KVC
+-(void)setValuesForKeysWithDictionary:(NSDictionary *)keyedValues
+{
+    
 }
 
 -(NSString *)description
