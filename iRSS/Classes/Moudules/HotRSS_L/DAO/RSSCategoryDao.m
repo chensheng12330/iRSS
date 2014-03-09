@@ -30,7 +30,7 @@
 
 #pragma mark - DB Opertion
 
--(NSArray*) getAllRSSCategorys
+-(NSMutableArray*) getAllRSSCategorys
 {
     FMDatabase *db = SHDBM.db;
     DBMQuickCheck(db);

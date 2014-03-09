@@ -1,5 +1,6 @@
 //
 //  RSSCategoryEntity.m
+
 //  iRSS
 //
 //  Created by sherwin on 14-3-5.
@@ -51,6 +52,8 @@
     
 }
 
+
+
 -(NSString *)description
 {
     NSString *superStr = [super description];
@@ -59,3 +62,60 @@
 }
 
 @end
+
+//+(void) get
+//{
+//    RSSCategoryEntity *rss = [[RSSCategoryEntity alloc] init];
+//    
+//    //key use
+//    [rss setValue:@"sherwin.chen" forKey:@"strName"];
+//    [rss setValue:@"iRSS.icon"    forKey:@"strIconName"];
+//    
+//    NSString* strRSSName = [rss valueForKey:@"strName"];
+//    NSString* strIconName= [rss valueForKey:@"strIconName"];
+//    
+//    //normal use
+//    strRSSName = rss.strName;
+//    strIconName= rss.strIconName;
+//}
+//@implementation RSSEntity
+//-(id)initWithDictionary:(NSDictionary *)jsonDict
+//{
+//    if (self=[super init]) {
+//        [self init];
+//        [self setValuesForKeysWithDictionary:jsonDict];
+//    }
+//    return self;
+//}
+//
+//-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+//{
+//    if ([key isEqualToString:@"id"]) {
+//        self.itemID = value;
+//    }
+//    else if ([key isEqualToString:@"date"]) {
+//        self.unixDate = [value integerValue];
+//    }
+//    else
+//    {
+//        NSLog(@"RSSEntity: Undefined Key: %@", key);
+//        [super setValue:value forKeyPath:key];
+//    }
+//    return;
+//}
+//
+//-(void)setValue:(id)value forKey:(NSString *)key
+//{
+//    if ([key isEqualToString:@"userInfo"]) {
+//        self.userInfo = [[[UserInfoEntity alloc] initWithDictionary:value] autorelease];
+//    }
+//    else
+//    {
+//        [super setValue:value forKey:key];
+//    }
+//    
+//    [rss valueForKeyPath:@"userInfo.name"];
+//    [rss setValue:@"sherwin.chen" forKeyPath:"userInfo.name"];
+//}
+//@end
+

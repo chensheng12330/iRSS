@@ -21,6 +21,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HotRSSViewController : BaseViewController
+@interface HotRSSViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
 
 @end

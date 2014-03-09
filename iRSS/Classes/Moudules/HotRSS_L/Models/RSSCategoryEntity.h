@@ -20,6 +20,7 @@
 //---------------------------------------------------------
 
 #import "Entity.h"
+#import <objc/runtime.h>
 
 /*!
  @Description  RSS源分类目录实体
@@ -32,6 +33,7 @@
 @property (nonatomic, copy) NSString *strIconName;  //分类icon图标
 @property (nonatomic, assign) NSInteger nRssNum;    //rss条数目
 
+
 //Runtime:
 // http://www.cocoachina.com/bbs/read.php?tid=97773
 // http://www.cocoachina.com/bbs/simple/?t97803.html
@@ -39,3 +41,24 @@
 -(id) initWithDictionary:(NSDictionary*) dict;
 
 @end
+
+
+//
+//@interface RSSEntity:Entity
+//@property (nonatomic, copy) NSString *itemID;
+//@property (nonatomic, copy) NSString *name;
+//@property (nonatomic, copy) NSString *iconName;
+//@property (nonatomic, assign) int unixDate;
+//
+////模型初使化接口
+//-(id) initWithDictionary:(NSDictionary*) jsonDict;
+//
+//@end
+//
+//@interface UserInfoEntity : Entity
+//@property (nonatomic, retain) NSString *name;
+//@property (nonatomic, retain) NSString *mail;
+//
+//-(id) initWithDictionary:(NSDictionary*) jsonDict;
+//@end
+

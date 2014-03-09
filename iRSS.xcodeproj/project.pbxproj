@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5826E6A5185013A600750A26 /* MKNetworkEngineEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5826E6A4185013A600750A26 /* MKNetworkEngineEx.m */; };
+		58344EE518CB2BBD00A52137 /* RSSCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58344EE418CB2BBD00A52137 /* RSSCategoryCell.m */; };
+		58344EE718CB2C1400A52137 /* RSSCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58344EE618CB2C1400A52137 /* RSSCategoryCell.xib */; };
 		5847332418C973BD00A9959A /* TestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847332318C973BD00A9959A /* TestBase.m */; };
 		5847332718C9741F00A9959A /* DBTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5847332618C9741F00A9959A /* DBTestCase.m */; };
 		584AE82A184C6CA80009A10E /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 584AE829184C6CA80009A10E /* MMTableViewCell.m */; };
@@ -149,6 +151,9 @@
 /* Begin PBXFileReference section */
 		5826E6A3185013A600750A26 /* MKNetworkEngineEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngineEx.h; sourceTree = "<group>"; };
 		5826E6A4185013A600750A26 /* MKNetworkEngineEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngineEx.m; sourceTree = "<group>"; };
+		58344EE318CB2BBD00A52137 /* RSSCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSCategoryCell.h; sourceTree = "<group>"; };
+		58344EE418CB2BBD00A52137 /* RSSCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSCategoryCell.m; sourceTree = "<group>"; };
+		58344EE618CB2C1400A52137 /* RSSCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSCategoryCell.xib; sourceTree = "<group>"; };
 		5847332218C973BD00A9959A /* TestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestBase.h; path = TestCase/TestBase.h; sourceTree = "<group>"; };
 		5847332318C973BD00A9959A /* TestBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestBase.m; path = TestCase/TestBase.m; sourceTree = "<group>"; };
 		5847332518C9741F00A9959A /* DBTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTestCase.h; sourceTree = "<group>"; };
@@ -972,6 +977,9 @@
 		5878BB2D184C35A700E3613C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				58344EE318CB2BBD00A52137 /* RSSCategoryCell.h */,
+				58344EE418CB2BBD00A52137 /* RSSCategoryCell.m */,
+				58344EE618CB2C1400A52137 /* RSSCategoryCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1287,6 +1295,7 @@
 				5878BAF5184C301D00E3613C /* ContactDataFile.plist in Resources */,
 				589565F918C718390045EED7 /* 3.png in Resources */,
 				5878BAF4184C301D00E3613C /* class_string.plist in Resources */,
+				58344EE718CB2C1400A52137 /* RSSCategoryCell.xib in Resources */,
 				58B80233184C21FF00A30235 /* Icon.png in Resources */,
 				589565FB18C718390045EED7 /* 5.png in Resources */,
 				589565FD18C718390045EED7 /* 7.png in Resources */,
@@ -1380,6 +1389,7 @@
 				5878BB01184C301D00E3613C /* FMDatabaseAdditions.m in Sources */,
 				5878BB04184C301D00E3613C /* fmdb.m in Sources */,
 				58B80204184C217100A30235 /* main.m in Sources */,
+				58344EE518CB2BBD00A52137 /* RSSCategoryCell.m in Sources */,
 				5878BB11184C301D00E3613C /* NSData+MKBase64.m in Sources */,
 				584C519F184D840F00FE153D /* RSSListEntity.m in Sources */,
 				584EA0CE18546BAC00964DC0 /* FTUtils+UIGestureRecognizer.m in Sources */,

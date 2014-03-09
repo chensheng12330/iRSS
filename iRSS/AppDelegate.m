@@ -66,6 +66,7 @@
     
     [self.drawerController setRestorationIdentifier:@"MMDrawer"];
     [self.drawerController setMaximumRightDrawerWidth:200.0];
+    //[self.drawerController setMaximumLeftDrawerWidth:320];
     [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     

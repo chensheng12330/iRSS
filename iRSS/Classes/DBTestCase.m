@@ -13,10 +13,17 @@
 
 -(void)testGo
 {
-    [self testRSSCategoryDao];
+    //[self testRSSCategoryDao];
+    //[RSSCategoryEntity get];
 }
 
-////////
+////////Test isOK
+/*!
+ 测试个数:
+ 开测时间:
+ 完测时间:
+ 完结状态:
+ */
 -(void) testRSSCategoryDao
 {
     RSSCategoryDao *rsDao = [[RSSCategoryDao alloc] init];

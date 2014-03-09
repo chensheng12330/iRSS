@@ -45,7 +45,7 @@ typedef enum
  @author   sherwin.chen
  @version  1.0.0
  */
--(NSArray*) getAllRSSCategorys;
+-(NSMutableArray*) getAllRSSCategorys;
 
 //增
 /*!
