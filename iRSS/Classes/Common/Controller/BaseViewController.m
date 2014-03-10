@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self adjustViewSize];
     
     if(OSVersionIsAtLeastiOS7()){
         [[NSNotificationCenter defaultCenter]
@@ -61,5 +62,34 @@
 -(void)networkChange:(NSNotification* )note
 {
     
+}
+
+-(void) adjustViewSize
+{
+    CGRect frame = [UIScreen mainScreen].bounds;
+    if ((DEVICE_IS_IPHONE5) && DEVICE_IS_IOS7) {
+        if (self.navigationController.navigationBar==Nil || self.navigationController.navigationBarHidden) {
+            frame.size.height -=20;
+        }
+    }
+    else
+    {
+        if (self.navigationController.navigationBar==Nil || self.navigationController.navigationBarHidden) {
+
+            frame.size.height -= 20 ;
+        }
+        else{
+            frame.size.height -= 20 + 44;
+        }
+        
+        if (DEVICE_IS_IOS7) {
+            frame.origin.y += 20;
+            frame.size.height += 20 ;
+        }
+    }
+    self.view.frame = frame;
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    return;
 }
 @end

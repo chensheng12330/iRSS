@@ -25,9 +25,14 @@
 
 //devices
 #define DEVICE_IS_IPHONE5 ([[UIScreen mainScreen] bounds].size.height == 568)
+#define DEVICE_IS_IPHONE4 ([[UIScreen mainScreen] bounds].size.height <= 480)
+#define DEVICE_IS_IPAD     ([[UIScreen mainScreen] bounds].size.width > 320)
 #define DEVICE_IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0)
 #define DEVICE_IS_480IOS7 (SH_SCREEN_HEIGHT==480 && DEVICE_IS_IOS7)
-
+#define DEVICE_Version_Value [[[UIDevice currentDevice] systemVersion] floatValue]
+#define DEVICE_RightDrawerWidth (DEVICE_IS_IPAD?SH_SCREEN_WIDTH:SH_SCREEN_WIDTH-70)
+//#define DEVICE_IS_IPAD ()
+//#if !TARGET_OS_IPHONE || __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_2_2
 //file dir
 #define SH_LibraryDir ([NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0])
 #define SH_FileMag ([NSFileManager defaultManager])
@@ -36,15 +41,6 @@
 //use dlog to print while in debug model
 #define DEBUG 1
 #ifdef DEBUG
-//War0-5: 0级最高
-/*
- War-0:0级 最高，内部运行错误，影响到app crash。包括，内存地址错误，运行时错误。
- War-1:1级,内部逻辑错误，会影响到数据的正确性，可能会引发app crash。包括，指针为空，无法取出数据，状态值。
- War-2:2级,可能会引发内存泄露的错误
- War-3:3级,可能会引发CPU高速运行，以及设备操作失败，硬件性tristate[三态]
- War-4:4级,网络请求性错误
- War-5:5级,数据库操作性错误。
- */
 #   define DLog(fmt, ...) {NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}
 #   define ELog(err) {if(err) DLog(@"%@", err)}
 #else
@@ -67,6 +63,9 @@
 #define SH_iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
 #define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+//通用提示框
+#define SH_Alert(info) {UIAlertView *alert= [[UIAlertView alloc] initWithTitle:@"温馨提示" message:info delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil];[alert show];[alert release];}
 
 //方正黑体简体字体定义
 #define FONT(F) [UIFont fontWithName:@"FZHTJW--GB1-0" size:F]

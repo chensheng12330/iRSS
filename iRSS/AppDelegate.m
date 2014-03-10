@@ -44,18 +44,31 @@
     UIViewController * centerViewController = [[RSSListViewController alloc] init];
     
     UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:centerViewController];
-    [navigationController setRestorationIdentifier:@"MMExampleCenterNavigationControllerRestorationKey"];
     
-    if(OSVersionIsAtLeastiOS7()){
+    if(1){//OSVersionIsAtLeastiOS7()
         UINavigationController * rightSideNavController = [[MMNavigationController alloc] initWithRootViewController:rightSideDrawerViewController];
-		[rightSideNavController setRestorationIdentifier:@"MMExampleRightNavigationControllerRestorationKey"];
+        rightSideNavController.navigationBar.barStyle  = UIBarStyleBlackOpaque;
+        
         UINavigationController * leftSideNavController = [[MMNavigationController alloc] initWithRootViewController:leftSideDrawerViewController];
-		[leftSideNavController setRestorationIdentifier:@"MMExampleLeftNavigationControllerRestorationKey"];
+		leftSideNavController.navigationBar.barStyle  = UIBarStyleBlackOpaque;
+        
         self.drawerController = [[MMDrawerController alloc]
                                  initWithCenterViewController:navigationController
                                  leftDrawerViewController:leftSideNavController
                                  rightDrawerViewController:rightSideNavController];
         [self.drawerController setShowsShadow:NO];
+        
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+        if (DEVICE_IS_IOS7) {
+            [navigationController setRestorationIdentifier:@"MMExampleCenterNavigationControllerRestorationKey"];
+            [rightSideNavController setRestorationIdentifier:@"MMExampleRightNavigationControllerRestorationKey"];
+            [leftSideNavController setRestorationIdentifier:@"MMExampleLeftNavigationControllerRestorationKey"];
+            
+            [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+        }
+        
+#endif
+        
     }
     else{
         self.drawerController = [[MMDrawerController alloc]
@@ -66,11 +79,13 @@
     
     [self.drawerController setRestorationIdentifier:@"MMDrawer"];
     [self.drawerController setMaximumRightDrawerWidth:200.0];
-    //[self.drawerController setMaximumLeftDrawerWidth:320];
+    [self.drawerController setMaximumLeftDrawerWidth:320];
     [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     
     COM.mmDrawerControl = self.drawerController;
+    COM.mmDrawerControl.enablePan = YES;
+    COM.viewController = (RSSListViewController*)centerViewController;
     
     [self.drawerController
      setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
@@ -84,6 +99,12 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    if (DEVICE_IS_IPHONE4 && !DEVICE_IS_IOS7) {
+        navigationController.navigationBar.tintColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        //self.nav.navigationBar.translucent = YES;
+        navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    }
+    
     if(OSVersionIsAtLeastiOS7()){
         UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
                                               green:173.0/255.0
@@ -91,6 +112,8 @@
                                               alpha:1.0];
         [self.window setTintColor:tintColor];
     }
+    
+    
     [self.window setRootViewController:self.drawerController];
     return YES;
 }
