@@ -10,16 +10,17 @@
 
 #import "MMDrawerController.h"
 #import "RSSListViewController.h"
-//#define MVC_MODE 1
+
+#import "RSSCategoryDao.h"
+#import "RSSListDao.h"
 
 #define COM [Common sharedCommon]
-
-
 
 
 @interface Common : NSObject
 @property (nonatomic, assign) MMDrawerController *mmDrawerControl;
 @property (nonatomic, assign) RSSListViewController *viewController;
+
 
 +(Common*) sharedCommon;
 
@@ -30,4 +31,5 @@
 
 
 - (UIImage *) stretchiOS5:(NSString *)icon;
+- (UIImage *)scaleToSize:(UIImage *)img size:(CGSize)size;
 @end

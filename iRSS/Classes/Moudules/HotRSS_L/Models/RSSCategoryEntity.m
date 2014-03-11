@@ -15,19 +15,25 @@
 {
     self = [super init];
     if (self) {
-        self.strIconName    = @"icon";
-        self.strName        = nil;
-        self.nRssNum        = 0;
+        _strIconName    = @"icon";
+        self.strName    = nil;
+        self.nRssNum    = 0;
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [super dealloc];
     self.nRssNum = 0;
     self.strName = nil;
     self.strIconName=nil;
+    
+    /*
+     如果先把父对象释放，存在的静态区的 字符串，就会被release掉，或许还有其它的玩意。
+     故，肯定要先把本子类中的所有东西都干掉，
+     再把交给父类，让他自已处理垃圾。
+     */
+    [super dealloc];
 }
 
 -(id) initWithDictionary:(NSDictionary*) dict

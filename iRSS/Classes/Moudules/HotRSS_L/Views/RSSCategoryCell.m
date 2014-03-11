@@ -32,4 +32,21 @@
     [_lbNum release];
     [super dealloc];
 }
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    CGRect frame = self.lbNum.frame;
+    
+    if (editing) {
+        frame.origin.x -= 5;
+    }
+    else
+    {
+        frame.origin.x = 213;
+    }
+    
+    //[self.ivImageView setFrame:frame];
+    //[self.ivImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [super setEditing:editing animated:animated];
+}
 @end
