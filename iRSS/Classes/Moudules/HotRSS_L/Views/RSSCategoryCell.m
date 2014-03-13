@@ -38,11 +38,11 @@
     CGRect frame = self.lbNum.frame;
     
     if (editing) {
-        frame.origin.x -= 20;
+        frame.origin.x -= 30;
     }
     else
     {
-        frame.origin.x = 255;
+        frame.origin.x = 252;
     }
     
     [self.lbNum  setFrame:frame];

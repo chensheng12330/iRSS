@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self adjustViewSize];
+    //[self adjustViewSize];
     
     if(OSVersionIsAtLeastiOS7()){
         [[NSNotificationCenter defaultCenter]
