@@ -33,7 +33,7 @@
     NSString *superStr = [super description];
     
     superStr = [superStr stringByAppendingFormat:@"RssName:[%@] RssUrl:[%@] RssClass:[%@] \n \
-                unReadNum:[%d] add_time:[%@]",_strRssName,_strRssUrl,_strRssClass,_nUnReadNum,_deAdd_time];
+                unReadNum:[%ld] add_time:[%@]",_strRssName,_strRssUrl,_strRssClass,(long)_nUnReadNum,_deAdd_time];
     
     return superStr;
 }

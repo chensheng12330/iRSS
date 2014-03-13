@@ -39,7 +39,7 @@
 {
     NSString *superStr = [super description];
     
-    superStr = [superStr stringByAppendingFormat:@"ID:[%d] ",_nId];
+    superStr = [superStr stringByAppendingFormat:@"ID:[%ld] ",(long)_nId];
     return superStr;
 }
 @end

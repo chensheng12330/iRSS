@@ -53,7 +53,7 @@ typedef enum {
 - (void) SetExpandingDirection:(EXP_DIR)  _exp_dir
 {
     NSLog(@"%u",_exp_dir);
-    int count = [_menusArray count];
+    NSInteger count = [_menusArray count];
     for (int ii = 0; ii < count; ii ++)
     {
         float i= ii+_exp_dir;
@@ -81,7 +81,7 @@ typedef enum {
         _menusArray = [aMenusArray copy];
         
         // add the menu buttons
-        int count = [_menusArray count];
+        NSInteger count = [_menusArray count];
         for (int ii = 0; ii < count; ii ++)
         {
             int i= ii;
@@ -300,7 +300,7 @@ typedef enum {
         }
     }
     // add the menu buttons
-    int count = [_menusArray count];
+    NSInteger count = [_menusArray count];
     for (int i = 0; i < count; i ++)
     {
         QuadCurveMenuItem *item = [_menusArray objectAtIndex:i];

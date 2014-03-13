@@ -38,9 +38,9 @@
 
 - (void)performAnimation:(id)sender {
   if(self.viewToAnimate.hidden) {
-	  [self.viewToAnimate slideInFrom:self.directionControl.selectedSegmentIndex inView:self.viewToAnimate.superview duration:0.4 delegate:nil startSelector:nil stopSelector:nil];
+	  [self.viewToAnimate slideInFrom:(FTAnimationDirection)self.directionControl.selectedSegmentIndex inView:self.viewToAnimate.superview duration:0.4 delegate:nil startSelector:nil stopSelector:nil];
   } else {
-	  [self.viewToAnimate slideOutTo:self.directionControl.selectedSegmentIndex inView:self.viewToAnimate.superview duration:0.4 delegate:nil startSelector:nil stopSelector:nil];
+	  [self.viewToAnimate slideOutTo:(FTAnimationDirection)self.directionControl.selectedSegmentIndex inView:self.viewToAnimate.superview duration:0.4 delegate:nil startSelector:nil stopSelector:nil];
 
   }
 }

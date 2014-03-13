@@ -161,7 +161,7 @@
     if (can0) { [sqlStr appendString:@","];}
     
     if (bit3) {
-        [sqlStr appendFormat:@"number=%d ",rssCateEntity.nRssNum]; can0=YES;
+        [sqlStr appendFormat:@"number=%ld ",(long)rssCateEntity.nRssNum]; can0=YES;
     }
     
     if (can0) { [sqlStr appendString:@","];}
@@ -170,7 +170,7 @@
         [sqlStr appendFormat:@"icon_name='%@' ",rssCateEntity.strIconName];
     }
     
-    [sqlStr appendFormat:@" where id=%d ", rssCateEntity.nId];
+    [sqlStr appendFormat:@" where id=%ld ", (long)rssCateEntity.nId];
     
     BOOL dbStatu = [db executeUpdate:sqlStr];
    

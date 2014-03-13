@@ -38,13 +38,14 @@
     CGRect frame = self.lbNum.frame;
     
     if (editing) {
-        frame.origin.x -= 5;
+        frame.origin.x -= 20;
     }
     else
     {
-        frame.origin.x = 213;
+        frame.origin.x = 255;
     }
     
+    [self.lbNum  setFrame:frame];
     //[self.ivImageView setFrame:frame];
     //[self.ivImageView setContentMode:UIViewContentModeScaleAspectFill];
     [super setEditing:editing animated:animated];

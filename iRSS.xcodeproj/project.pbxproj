@@ -1531,8 +1531,8 @@
 		58B8022D184C217100A30235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Feng Quchi (RL5YX28ZFH)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Feng Quchi (RL5YX28ZFH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Chen (3J96JJY92E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: James Chen (3J96JJY92E)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Volumes/Data\\ HD/SVN_Project/Bitbucket_SVN/iRSS/iRSS/Classes/Common/Utilities/ThirdParty\\ Lib/HMSideMenu/FTUtiles",
@@ -1542,8 +1542,8 @@
 				INFOPLIST_FILE = "iRSS/iRSS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BDB35FD8-5D8F-4D32-9B8C-41369DE35A0D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BDB35FD8-5D8F-4D32-9B8C-41369DE35A0D";
+				PROVISIONING_PROFILE = "5FC208A7-055A-4A8C-A823-6D3BECE6CF0C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5FC208A7-055A-4A8C-A823-6D3BECE6CF0C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1551,8 +1551,8 @@
 		58B8022E184C217100A30235 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Feng Quchi (RL5YX28ZFH)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Feng Quchi (RL5YX28ZFH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Chen (3J96JJY92E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: James Chen (3J96JJY92E)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Volumes/Data\\ HD/SVN_Project/Bitbucket_SVN/iRSS/iRSS/Classes/Common/Utilities/ThirdParty\\ Lib/HMSideMenu/FTUtiles",
@@ -1562,8 +1562,8 @@
 				INFOPLIST_FILE = "iRSS/iRSS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BDB35FD8-5D8F-4D32-9B8C-41369DE35A0D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BDB35FD8-5D8F-4D32-9B8C-41369DE35A0D";
+				PROVISIONING_PROFILE = "5FC208A7-055A-4A8C-A823-6D3BECE6CF0C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5FC208A7-055A-4A8C-A823-6D3BECE6CF0C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

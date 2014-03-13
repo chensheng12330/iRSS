@@ -84,7 +84,7 @@
     DBMQuickCheck(db);
     FMResultSet *rs =nil;
     
-    rs = [db executeQuery:@"select * from BlogInfoTable where rss_id=? order by date desc ",[NSNumber numberWithInt:pid]];
+    rs = [db executeQuery:@"select * from BlogInfoTable where rss_id=? order by date desc ",[NSNumber numberWithLong:pid]];
     
     //get query db log
     DEBUG_DB_ERROR_LOG;

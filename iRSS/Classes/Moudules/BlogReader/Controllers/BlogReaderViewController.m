@@ -184,7 +184,7 @@
 
 - (void)quadCurveMenu:(QuadCurveMenu *)menu didSelectIndex:(NSInteger)idx
 {
-    int tag = idx;
+    NSInteger tag = idx;
     if (tag ==0) { //主页
         [self.navigationController popViewControllerAnimated:YES];
     }

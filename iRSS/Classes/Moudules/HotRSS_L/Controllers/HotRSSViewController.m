@@ -95,7 +95,7 @@
     [cell.imageView setImage:image];
     
     [cell.lbTitile setText:cateEnty.strName];
-    [cell.lbNum setText:[NSString stringWithFormat:@"[%d]",cateEnty.nRssNum]];
+    [cell.lbNum setText:[NSString stringWithFormat:@"[%ld]",(long)cateEnty.nRssNum]];
     
     return cell;
 }
@@ -103,6 +103,11 @@
 #pragma mark - UITableView Delegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
 }
 

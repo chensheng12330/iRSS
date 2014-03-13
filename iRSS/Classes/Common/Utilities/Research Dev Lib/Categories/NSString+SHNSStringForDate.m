@@ -149,7 +149,7 @@
     //int week=0;week1是星期天,week7是星期六;
     comps = [calendar components:unitFlags fromDate:date];
     
-    int week = [comps weekday];        
+    NSInteger week = [comps weekday];
     NSString*weekStr=nil;
     if(week==1)
     {

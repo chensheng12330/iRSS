@@ -180,7 +180,7 @@
     
     RSSListEntity *listEnty = [self.dateSource objectAtIndex:indexPath.row];
     cell.textLabel.text = listEnty.strRssName;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"(%d)",listEnty.nUnReadNum];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"(%ld)",(long)listEnty.nUnReadNum];
     
     return cell;
 }

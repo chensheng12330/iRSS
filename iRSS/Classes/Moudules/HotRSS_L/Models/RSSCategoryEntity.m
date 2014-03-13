@@ -63,7 +63,7 @@
 -(NSString *)description
 {
     NSString *superStr = [super description];
-    superStr = [superStr stringByAppendingFormat:@"CateName:[%@], Icon:[%@], RSSNum:[%d]",_strName,_strIconName,_nRssNum];
+    superStr = [superStr stringByAppendingFormat:@"CateName:[%@], Icon:[%@], RSSNum:[%ld]",_strName,_strIconName,(long)_nRssNum];
     return superStr;
 }
 
