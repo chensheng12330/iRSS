@@ -10,5 +10,7 @@
 
 @interface RSSListViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,retain) UITableView * tableView;
+@property (nonatomic, assign) int nRssClassID;
 
+-(void) reloadTableViewDataWithRSSClassID:(int) nfRssClassID;
 @end

@@ -47,12 +47,18 @@
     
 }
 
+-(void) reloadTableViewDataWithRSSClassID:(int) nfRssClassID
+{
+    self.nRssClassID = nfRssClassID;
+    self.dateSource = [_rssListDao getBookRSSList:nfRssClassID];
+    [self.tableView reloadData];
+    
+    return;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //get datasource from dao
-    self.dateSource = [_rssListDao getBookRSSList];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     [self.tableView setDelegate:self];
@@ -107,6 +113,11 @@
                                                   blue:208.0/255.0
                                                  alpha:1.0]];
     [self.tableView setBackgroundView:backView];
+    
+    //get datasource from dao
+    //可记住用户当前选择项目
+    [self reloadTableViewDataWithRSSClassID:1]; //1 标识为初使化列表
+    return;
 }
 
 -(void)viewWillAppear:(BOOL)animated{

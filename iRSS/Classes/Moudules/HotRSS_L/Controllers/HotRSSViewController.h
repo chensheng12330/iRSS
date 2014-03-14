@@ -24,4 +24,5 @@
 @interface HotRSSViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource,
 UIActionSheetDelegate,UIAlertViewDelegate>
 
+//-(void)
 @end

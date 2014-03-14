@@ -13,7 +13,7 @@
 /*
 @discussion 获取已订阅RSS数据列表
  */
--(NSMutableArray *) getBookRSSList;
+-(NSMutableArray *) getBookRSSList:(int) rss_class_id;
 
 //更新数据
 

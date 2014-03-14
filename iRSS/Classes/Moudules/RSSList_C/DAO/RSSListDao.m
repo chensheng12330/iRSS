@@ -26,13 +26,13 @@
 }
 
 #pragma mark - SH_DAO_Interface
--(NSMutableArray *) getBookRSSList
+-(NSMutableArray *) getBookRSSList:(int) rss_class_id
 {
     FMDatabase *db = SHDBM.db;
     DBMQuickCheck(db);
     FMResultSet *rs =nil;
     
-    rs = [db executeQuery:@"select * from RSSTable order by add_time desc "];
+    rs = [db executeQuery:@"select * from RSSTable where rss_class=? order by add_time desc ",@(rss_class_id)];
     
     //get query db log
     DEBUG_DB_ERROR_LOG;
