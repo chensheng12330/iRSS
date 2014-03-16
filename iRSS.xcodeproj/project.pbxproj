@@ -134,6 +134,8 @@
 		58B80226184C217100A30235 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58B80224184C217100A30235 /* InfoPlist.strings */; };
 		58B80229184C217100A30235 /* iRSSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B80228184C217100A30235 /* iRSSTests.m */; };
 		58B80233184C21FF00A30235 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 58B80232184C21FF00A30235 /* Icon.png */; };
+		58C5269618D45D7F00990F73 /* NewRSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C5269518D45D7F00990F73 /* NewRSSViewController.m */; };
+		58C5269818D4622700990F73 /* NewRSSCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C5269718D4622700990F73 /* NewRSSCellView.xib */; };
 		58CFD9CB184E14D80064454D /* irss.db in Resources */ = {isa = PBXBuildFile; fileRef = 58CFD9CA184E14D80064454D /* irss.db */; };
 		58CFD9CF184E26120064454D /* NSString+SHNSStringForDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CFD9CE184E26120064454D /* NSString+SHNSStringForDate.m */; };
 		58EFDEAD18D2F7F000837686 /* setting_cell_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EFDEA818D2F7F000837686 /* setting_cell_0.png */; };
@@ -372,6 +374,9 @@
 		58B80227184C217100A30235 /* iRSSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRSSTests.h; sourceTree = "<group>"; };
 		58B80228184C217100A30235 /* iRSSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iRSSTests.m; sourceTree = "<group>"; };
 		58B80232184C21FF00A30235 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		58C5269418D45D7F00990F73 /* NewRSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRSSViewController.h; sourceTree = "<group>"; };
+		58C5269518D45D7F00990F73 /* NewRSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRSSViewController.m; sourceTree = "<group>"; };
+		58C5269718D4622700990F73 /* NewRSSCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewRSSCellView.xib; sourceTree = "<group>"; };
 		58CFD9CA184E14D80064454D /* irss.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = irss.db; sourceTree = "<group>"; };
 		58CFD9CD184E26120064454D /* NSString+SHNSStringForDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHNSStringForDate.h"; sourceTree = "<group>"; };
 		58CFD9CE184E26120064454D /* NSString+SHNSStringForDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHNSStringForDate.m"; sourceTree = "<group>"; };
@@ -1023,6 +1028,8 @@
 			children = (
 				5878BB3D184C552A00E3613C /* RSSListViewController.h */,
 				5878BB3E184C552A00E3613C /* RSSListViewController.m */,
+				58C5269418D45D7F00990F73 /* NewRSSViewController.h */,
+				58C5269518D45D7F00990F73 /* NewRSSViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1052,6 +1059,7 @@
 				584AE82C184C6CDF0009A10E /* RSSListTableViewCell.m */,
 				584AE82D184C6CDF0009A10E /* RSSLogoView.h */,
 				584AE82E184C6CDF0009A10E /* RSSLogoView.m */,
+				58C5269718D4622700990F73 /* NewRSSCellView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1314,6 +1322,7 @@
 				58B80202184C217100A30235 /* InfoPlist.strings in Resources */,
 				584EA0DD18546BBE00964DC0 /* btn3.png in Resources */,
 				5878BB1A184C301D00E3613C /* RSS工具.html in Resources */,
+				58C5269818D4622700990F73 /* NewRSSCellView.xib in Resources */,
 				58EFDEAF18D2F7F000837686 /* setting_cell_2.png in Resources */,
 				584EA0E218546BBE00964DC0 /* icon-plus.png in Resources */,
 				5878BAF7184C301D00E3613C /* tabbar_item_list.plist in Resources */,
@@ -1391,6 +1400,7 @@
 				5878BAFD184C301D00E3613C /* SHUserSetting.m in Sources */,
 				5878BAFE184C301D00E3613C /* UIDevice+Extend.m in Sources */,
 				5878BB00184C301D00E3613C /* FMDatabase.m in Sources */,
+				58C5269618D45D7F00990F73 /* NewRSSViewController.m in Sources */,
 				5878BAFA184C301D00E3613C /* Entity.m in Sources */,
 				584EA0861854449C00964DC0 /* BlogListTableViewCell.m in Sources */,
 				5878BB03184C301D00E3613C /* FMDatabaseQueue.m in Sources */,

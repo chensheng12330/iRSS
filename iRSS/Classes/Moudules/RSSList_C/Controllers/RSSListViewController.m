@@ -178,6 +178,7 @@
         [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
     }
     
+    /*
     UIColor * selectedColor = [UIColor
                                colorWithRed:1.0/255.0
                                green:15.0/255.0
@@ -188,6 +189,7 @@
                                  green:93.0/255.0
                                  blue:102.0/255.0
                                  alpha:1.0];
+    */
     
     RSSListEntity *listEnty = [self.dateSource objectAtIndex:indexPath.row];
     cell.textLabel.text = listEnty.strRssName;
@@ -225,4 +227,10 @@
     [self.mm_drawerController bouncePreviewForDrawerSide:MMDrawerSideRight completion:nil];
 }
 
+#pragma mark - external inteface
+
+-(void) addNewRss
+{
+    
+}
 @end

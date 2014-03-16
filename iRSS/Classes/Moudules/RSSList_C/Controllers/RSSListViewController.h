@@ -13,4 +13,6 @@
 @property (nonatomic, assign) int nRssClassID;
 
 -(void) reloadTableViewDataWithRSSClassID:(int) nfRssClassID;
+
+-(void) addNewRss;
 @end

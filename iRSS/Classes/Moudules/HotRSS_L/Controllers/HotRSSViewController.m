@@ -104,6 +104,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    //当前模式
+    if (1) {
+        RSSCategoryEntity *cateEnty = [self.dataSource objectAtIndex:indexPath.row];
+        
+        [COM.mmDrawerControl closeDrawerAnimated:YES completion:^(BOOL finished) {
+            [COM.viewController reloadTableViewDataWithRSSClassID:cateEnty.nId];
+        }];
+        
+    }
 }
 
 //- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
