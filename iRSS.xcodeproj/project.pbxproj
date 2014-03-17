@@ -108,6 +108,8 @@
 		5878BB56184C623500E3613C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5878BB55184C623500E3613C /* MobileCoreServices.framework */; };
 		5878BB59184C647500E3613C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5878BB58184C647500E3613C /* Security.framework */; };
 		5878BB61184C656200E3613C /* NSFileManager+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5878BB60184C656200E3613C /* NSFileManager+Extend.m */; };
+		588AC26518D69FDA00AE54BC /* bk_new_rss_tfurl.png in Resources */ = {isa = PBXBuildFile; fileRef = 588AC26318D69FDA00AE54BC /* bk_new_rss_tfurl.png */; };
+		588AC26618D69FDA00AE54BC /* btn_new_rss_do.png in Resources */ = {isa = PBXBuildFile; fileRef = 588AC26418D69FDA00AE54BC /* btn_new_rss_do.png */; };
 		5891A4C6184CABB2009B707F /* RSSListDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 5891A4C5184CABB2009B707F /* RSSListDao.m */; };
 		589565F718C718390045EED7 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 589565EF18C718390045EED7 /* 1.png */; };
 		589565F818C718390045EED7 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 589565F018C718390045EED7 /* 2.png */; };
@@ -340,6 +342,8 @@
 		5878BB58184C647500E3613C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		5878BB5F184C656200E3613C /* NSFileManager+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Extend.h"; sourceTree = "<group>"; };
 		5878BB60184C656200E3613C /* NSFileManager+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Extend.m"; sourceTree = "<group>"; };
+		588AC26318D69FDA00AE54BC /* bk_new_rss_tfurl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bk_new_rss_tfurl.png; sourceTree = "<group>"; };
+		588AC26418D69FDA00AE54BC /* btn_new_rss_do.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_new_rss_do.png; sourceTree = "<group>"; };
 		5891A4C4184CABB2009B707F /* RSSListDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSListDao.h; sourceTree = "<group>"; };
 		5891A4C5184CABB2009B707F /* RSSListDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSListDao.m; sourceTree = "<group>"; };
 		589565EF18C718390045EED7 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -573,6 +577,8 @@
 		586D727618CD9FEF00392141 /* button */ = {
 			isa = PBXGroup;
 			children = (
+				588AC26318D69FDA00AE54BC /* bk_new_rss_tfurl.png */,
+				588AC26418D69FDA00AE54BC /* btn_new_rss_do.png */,
 				586D727718CD9FEF00392141 /* btn_category_add.png */,
 				586D727818CD9FEF00392141 /* btn_category_edit.png */,
 			);
@@ -1323,8 +1329,10 @@
 				584EA0DD18546BBE00964DC0 /* btn3.png in Resources */,
 				5878BB1A184C301D00E3613C /* RSS工具.html in Resources */,
 				58C5269818D4622700990F73 /* NewRSSCellView.xib in Resources */,
+				588AC26618D69FDA00AE54BC /* btn_new_rss_do.png in Resources */,
 				58EFDEAF18D2F7F000837686 /* setting_cell_2.png in Resources */,
 				584EA0E218546BBE00964DC0 /* icon-plus.png in Resources */,
+				588AC26518D69FDA00AE54BC /* bk_new_rss_tfurl.png in Resources */,
 				5878BAF7184C301D00E3613C /* tabbar_item_list.plist in Resources */,
 				584EA0CA18546BAC00964DC0 /* ViewBackground.png in Resources */,
 				589565FC18C718390045EED7 /* 6.png in Resources */,

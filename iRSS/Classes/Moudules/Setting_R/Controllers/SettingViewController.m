@@ -92,6 +92,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         //add new ss
+        [COM.mmDrawerControl closeDrawerAnimated:YES completion:^(BOOL finished) {
+            [COM.viewController addNewRss];
+        }];
+        
     }
     else if (indexPath.row == 1)
     {

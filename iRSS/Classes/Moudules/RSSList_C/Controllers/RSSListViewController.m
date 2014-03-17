@@ -16,7 +16,7 @@
 #import "RSSListTableViewCell.h"
 #import "HotRSSViewController.h"
 #import "SettingViewController.h"
-
+#import "NewRSSViewController.h"
 #import "BlogListViewController.h"
 
 #import "RSSListDao.h"
@@ -231,6 +231,9 @@
 
 -(void) addNewRss
 {
-    
+    NewRSSViewController *newRssVC = [[NewRSSViewController alloc] init];
+    [self presentViewController:newRssVC animated:YES completion:^{
+        
+    }];
 }
 @end
