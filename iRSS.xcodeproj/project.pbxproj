@@ -121,6 +121,8 @@
 		589565FE18C718390045EED7 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 589565F618C718390045EED7 /* 8.png */; };
 		5895660118C71A1D0045EED7 /* RSSCategoryDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 5895660018C71A1D0045EED7 /* RSSCategoryDao.m */; };
 		5895660418C722A70045EED7 /* RSSCategoryEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5895660318C722A70045EED7 /* RSSCategoryEntity.m */; };
+		5896B5D018D7F033003585E1 /* radiobox_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5896B5CE18D7F033003585E1 /* radiobox_1.png */; };
+		5896B5D118D7F033003585E1 /* radiobox_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 5896B5CF18D7F033003585E1 /* radiobox_0.png */; };
 		58B801F8184C217100A30235 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801F7184C217100A30235 /* UIKit.framework */; };
 		58B801FA184C217100A30235 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801F9184C217100A30235 /* Foundation.framework */; };
 		58B801FC184C217100A30235 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B801FB184C217100A30235 /* CoreGraphics.framework */; };
@@ -358,6 +360,8 @@
 		5895660018C71A1D0045EED7 /* RSSCategoryDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSCategoryDao.m; sourceTree = "<group>"; };
 		5895660218C722A70045EED7 /* RSSCategoryEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSCategoryEntity.h; sourceTree = "<group>"; };
 		5895660318C722A70045EED7 /* RSSCategoryEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSCategoryEntity.m; sourceTree = "<group>"; };
+		5896B5CE18D7F033003585E1 /* radiobox_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radiobox_1.png; sourceTree = "<group>"; };
+		5896B5CF18D7F033003585E1 /* radiobox_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radiobox_0.png; sourceTree = "<group>"; };
 		58B801F4184C217100A30235 /* iRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B801F7184C217100A30235 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		58B801F9184C217100A30235 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -577,6 +581,8 @@
 		586D727618CD9FEF00392141 /* button */ = {
 			isa = PBXGroup;
 			children = (
+				5896B5CE18D7F033003585E1 /* radiobox_1.png */,
+				5896B5CF18D7F033003585E1 /* radiobox_0.png */,
 				588AC26318D69FDA00AE54BC /* bk_new_rss_tfurl.png */,
 				588AC26418D69FDA00AE54BC /* btn_new_rss_do.png */,
 				586D727718CD9FEF00392141 /* btn_category_add.png */,
@@ -1349,12 +1355,14 @@
 				584EA088185445D500964DC0 /* View.xib in Resources */,
 				58B8020E184C217100A30235 /* Default-568h@2x.png in Resources */,
 				584EA0DE18546BBE00964DC0 /* btn4.png in Resources */,
+				5896B5D018D7F033003585E1 /* radiobox_1.png in Resources */,
 				586D727918CD9FEF00392141 /* btn_category_add.png in Resources */,
 				584AE832184C703D0009A10E /* RSS.png in Resources */,
 				58CFD9CB184E14D80064454D /* irss.db in Resources */,
 				5878BAF5184C301D00E3613C /* ContactDataFile.plist in Resources */,
 				58EFDEAD18D2F7F000837686 /* setting_cell_0.png in Resources */,
 				589565F918C718390045EED7 /* 3.png in Resources */,
+				5896B5D118D7F033003585E1 /* radiobox_0.png in Resources */,
 				5878BAF4184C301D00E3613C /* class_string.plist in Resources */,
 				58344EE718CB2C1400A52137 /* RSSCategoryCell.xib in Resources */,
 				58B80233184C21FF00A30235 /* Icon.png in Resources */,
@@ -1586,10 +1594,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRSS/iRSS-Prefix.pch";
 				INFOPLIST_FILE = "iRSS/iRSS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5FC208A7-055A-4A8C-A823-6D3BECE6CF0C";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5FC208A7-055A-4A8C-A823-6D3BECE6CF0C";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1606,10 +1615,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRSS/iRSS-Prefix.pch";
 				INFOPLIST_FILE = "iRSS/iRSS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5FC208A7-055A-4A8C-A823-6D3BECE6CF0C";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5FC208A7-055A-4A8C-A823-6D3BECE6CF0C";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

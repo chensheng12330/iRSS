@@ -14,11 +14,23 @@
 
 @property (nonatomic, assign) UIButton *btnSwitchURL;
 @property (nonatomic, assign) UIButton *btnSwitchBlog;
+@property (nonatomic, assign) int curSelectTyep;
+
 @property (nonatomic, assign) UITextField *tfURLStr;
+@property (nonatomic, assign) UITextField *tfSearchKey;
 
 @end
 
 @implementation NewRSSViewController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.curSelectTyep = 1;
+    }
+    return self;
+}
 
 - (void)dealloc
 {
@@ -27,6 +39,9 @@
     
     _btnSwitchBlog = nil;
     _btnSwitchURL  = nil;
+    
+    _tfURLStr = nil;
+    _tfSearchKey=nil;
     
     [super dealloc];
 }
@@ -112,6 +127,10 @@
         }
         else if (nTag == 4 && indexPath.section==1)
         {
+            cell = [[UITableViewCell alloc] initWithStyle:0 reuseIdentifier:@"newRss"];
+            self.tfSearchKey = [[UITextField alloc] initWithFrame:CGRectInset(cell.bounds, 20, 5)];
+            [self.tfSearchKey setBackground:[UIImage imageNamed:@"bk_new_rss_tfurl"]];
+            [cell addSubview:self.tfSearchKey];
             
         }
     
@@ -137,6 +156,32 @@
 
 -(void) switchRSSType:(UIButton*) sender
 {
+    NSInteger tag = sender.tag;
+    self.curSelectTyep = tag;
     
+    if (tag==1) { //左  URL
+        [self.btnSwitchBlog setImage:[UIImage imageNamed:@"radiobox_0"] forState:UIControlStateNormal];
+        [self.btnSwitchURL setImage:[UIImage imageNamed:@"radiobox_1"] forState:UIControlStateNormal];
+        
+        if (self.dataSource.count >3) {
+            [self.dataSource removeLastObject];
+            
+            [self.tableView deleteRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:1 inSection:1]] withRowAnimation:UITableViewRowAnimationRight];
+            
+            //[self.tableView reloadData];
+        }
+        
+    }
+    else if (tag ==2)//右 Blog
+    {
+        [self.btnSwitchBlog setImage:[UIImage imageNamed:@"radiobox_1"] forState:UIControlStateNormal];
+        [self.btnSwitchURL setImage:[UIImage imageNamed:@"radiobox_0"] forState:UIControlStateNormal];
+        
+        if (self.dataSource.count <4) {
+            [self.dataSource addObject:@"4"];
+            [self.tableView reloadData];
+        }
+    }
+    return;
 }
 @end
