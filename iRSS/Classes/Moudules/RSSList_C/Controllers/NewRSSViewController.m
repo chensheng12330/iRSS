@@ -74,14 +74,33 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.dataSource.count>3 && section==1) {
+        return 2;
+    }
     return 1;//self.dataSource.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section==0) {
-        return 20;
+        return 60;
     }
-    return 1.0;
+    else if (section==1) {
+        return 40;
+    }
+    return 5.0;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section==0) {
+        return @"新增RSS源";
+    }
+    else if (section==1)
+    {
+        return @"RSS地址URL";
+    }
+    
+    return @"";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -101,6 +120,7 @@
             NSArray *arViews = [[NSBundle mainBundle] loadNibNamed:@"NewRSSCellView" owner:self options:nil];
             cell = (UITableViewCell*)[arViews objectAtIndex:0];
             
+
             self.btnSwitchURL = (UIButton*)[cell viewWithTag:1];
             [self.btnSwitchURL addTarget:self action:@selector(switchRSSType:) forControlEvents:UIControlEventTouchUpInside];
             
@@ -113,6 +133,7 @@
             cell = [[UITableViewCell alloc] initWithStyle:0 reuseIdentifier:@"newRss"];
             self.tfURLStr = [[UITextField alloc] initWithFrame:CGRectInset(cell.bounds, 5, 5)];
             [self.tfURLStr setBackground:[UIImage imageNamed:@"bk_new_rss_tfurl"]];
+            
             [cell addSubview:self.tfURLStr];
         }
         else if (nTag == 3 && indexPath.section==2)
@@ -127,9 +148,12 @@
         }
         else if (nTag == 4 && indexPath.section==1)
         {
+            //UILabel *labText = [UILabel alloc]
+            
             cell = [[UITableViewCell alloc] initWithStyle:0 reuseIdentifier:@"newRss"];
-            self.tfSearchKey = [[UITextField alloc] initWithFrame:CGRectInset(cell.bounds, 20, 5)];
+            self.tfSearchKey = [[UITextField alloc] initWithFrame:CGRectOffset(CGRectInset(cell.bounds, 40, 5),30,0)];
             [self.tfSearchKey setBackground:[UIImage imageNamed:@"bk_new_rss_tfurl"]];
+            self.tfSearchKey.returnKeyType = UIReturnKeyDone;
             [cell addSubview:self.tfSearchKey];
             
         }
@@ -140,13 +164,14 @@
     
     //cell.textLabel.text = [NSString stringWithFormat:@"Cell %d", indexPath.row];
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 #pragma mark - UITableView Delegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 -(void) actionDO:(UIButton *) sender
@@ -179,7 +204,9 @@
         
         if (self.dataSource.count <4) {
             [self.dataSource addObject:@"4"];
-            [self.tableView reloadData];
+            
+            [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:1 inSection:1]] withRowAnimation:UITableViewRowAnimationTop];
+            //[self.tableView reloadData];
         }
     }
     return;
