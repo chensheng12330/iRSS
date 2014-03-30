@@ -131,7 +131,9 @@
         else if (nTag == 2 && indexPath.section==1)
         {
             cell = [[UITableViewCell alloc] initWithStyle:0 reuseIdentifier:@"newRss"];
-            self.tfURLStr = [[UITextField alloc] initWithFrame:CGRectInset(cell.bounds, 5, 5)];
+            self.tfURLStr = [[UITextField alloc] initWithFrame:CGRectInset(cell.bounds, 14, 5)];
+            self.tfURLStr.delegate  = self;
+            self.tfURLStr.returnKeyType = UIReturnKeyDone;
             [self.tfURLStr setBackground:[UIImage imageNamed:@"bk_new_rss_tfurl"]];
             
             [cell addSubview:self.tfURLStr];
@@ -148,14 +150,29 @@
         }
         else if (nTag == 4 && indexPath.section==1)
         {
-            //UILabel *labText = [UILabel alloc]
-            
             cell = [[UITableViewCell alloc] initWithStyle:0 reuseIdentifier:@"newRss"];
-            self.tfSearchKey = [[UITextField alloc] initWithFrame:CGRectOffset(CGRectInset(cell.bounds, 40, 5),30,0)];
+            
+            UILabel *labText = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, 70, 21)];
+            [labText setBackgroundColor:[UIColor clearColor]];
+            [labText setTextColor:[UIColor grayColor]];
+            [labText setFont:[UIFont systemFontOfSize:17]];
+            [labText setText:@"关键字"];
+            [cell addSubview:labText];
+            
+            
+            self.tfSearchKey = [[UITextField alloc] initWithFrame:CGRectOffset(CGRectInset(cell.bounds, 70, 5),10,0)];
             [self.tfSearchKey setBackground:[UIImage imageNamed:@"bk_new_rss_tfurl"]];
+            self.tfSearchKey.delegate = self;
             self.tfSearchKey.returnKeyType = UIReturnKeyDone;
             [cell addSubview:self.tfSearchKey];
             
+            
+            UIButton *btnDo = [UIButton buttonWithType:0];
+            [btnDo setFrame:CGRectMake(320-50, 5, 30, 30)];
+            [btnDo setTitle:@"DO" forState:UIControlStateNormal];
+            [btnDo setBackgroundImage:[UIImage imageNamed:@"btn_new_rss_do"] forState:UIControlStateNormal];
+            [btnDo addTarget:self action:@selector(actionDO:) forControlEvents:UIControlEventTouchUpInside];
+            [cell addSubview:btnDo];
         }
     
     }
@@ -175,6 +192,11 @@
 }
 
 -(void) actionDO:(UIButton *) sender
+{
+    
+}
+
+-(void) actionSearch:(UIButton*) sender
 {
     
 }
@@ -210,5 +232,11 @@
         }
     }
     return;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 @end

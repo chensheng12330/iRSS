@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface NewRSSViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+@interface NewRSSViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate
+,UITextFieldDelegate>
 
 @end
